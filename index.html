@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bellaroma - Prototipo</title>
+
+    <!-- Google Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <!-- Google Fonts (Ejemplo: Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Hojas de Estilo Modulares -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+    
+
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <a href="index.html">
+                    <img src="assets/Bellaroma_logos/br_logo_negro_transparente.png" alt="Bellaroma Logo negro" class="logo-light">
+                    <img src="assets/Bellaroma_logos/br_logo_lanco_transparente.png" alt="Bellaroma Logo blanco" class="logo-dark">
+                </a>
+            </div>
+
+            <ul class="main-nav">
+                <li><a href="index.html" class="active">INICIO</a></li>
+                <li><a href="#">PERFUMES</a></li>
+                <li><a href="#">PERFUMES POR MAYOREO</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">CONTACTO</a></li>
+            </ul>
+
+            <!-- Bloque 3: Acciones de Usuario -->
+            <div class="nav-actions">
+                <span class="material-symbols-outlined search-icon">search</span>
+                <span class="material-symbols-outlined account-icon">person</span>
+                <div class="cart-action">
+                    <span class="material-symbols-outlined cart-icon">shopping_bag</span>
+                    <span class="cart-badge">3</span>
+                </div>
+                <button id="theme-switcher" class="material-symbols-outlined">light_mode</button>
+            </div>
+
+            <!-- Botón de Menú Móvil (Hamburguesa) -->
+            <button class="mobile-menu-toggle">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Panel de Navegación Móvil (Oculto por defecto) -->
+    <aside class="mobile-nav-panel">
+        <button class="close-btn"><span class="material-symbols-outlined">close</span></button>
+        <ul>
+            <li><a href="#">INICIO</a></li>
+            <li><a href="#">PERFUMES</a></li>
+            <li><a href="#">PERFUMES POR MAYOREO</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">CONTACTO</a></li>
+        </ul>
+    </aside>
+    <div class="nav-overlay"></div>
+
+
+    <main class="main-content">
+        <h1>Bienvenido a Bellaroma</h1>
+        <p>Este es un contenido de ejemplo.</p>
+    </main>
+
+    <!-- Scripts Modulares -->
+    <script src="js/navbar.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

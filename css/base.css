@@ -1,0 +1,63 @@
+/* =================================
+   Archivo: css/base.css 
+   ================================= */
+:root {
+    /* Variables del Tema Claro (Default) */
+    --color-background: #FFFFFF;
+    --color-text: #111111;
+    --color-primary-accent: #D4AF37; /* Un dorado sutil */
+    --color-secondary-accent: #F5F5F5; /* Un gris muy claro para fondos */
+    --color-border: #EAEAEA;
+    --logo-display-light: block;
+    --logo-display-dark: none;
+}
+
+[data-theme="dark"] {
+    /* Variables del Tema Oscuro */
+    --color-background: #121212;
+    --color-text: #EAEAEA;
+    --color-primary-accent: #D4AF37;
+    --color-secondary-accent: #1E1E1E;
+    --color-border: #2A2A2A;
+    --logo-display-light: none;
+    --logo-display-dark: block;
+}
+
+/* Reseteo Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Contenido de ejemplo para ver el scroll */
+.main-content {
+    padding: 5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 200vh; /* Para forzar el scroll */
+}
+.main-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.main-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}

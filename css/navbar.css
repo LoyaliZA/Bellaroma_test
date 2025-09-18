@@ -1,0 +1,218 @@
+/* =================================
+   Archivo: css/navbar.css 
+   ================================= */
+
+/* --- Estilos Base de la Navbar --- */
+.main-header {
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+    padding: 0 2rem; /* Espaciado lateral */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px; /* Altura de la navbar */
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* --- Logo --- */
+.navbar-logo a {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 70px; /* Ajusta la altura de tu logo */
+    transition: opacity 0.3s ease;
+}
+.logo-light { display: var(--logo-display-light); }
+.logo-dark { display: var(--logo-display-dark); }
+
+/* --- Navegación Principal (Escritorio) --- */
+.main-nav {
+    display: flex;
+    gap: 2.5rem; /* Espacio entre enlaces */
+}
+
+.main-nav a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+/* Efecto hover con línea inferior */
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary-accent);
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--color-primary-accent);
+}
+.main-nav a:hover::after, .main-nav a.active::after {
+    width: 100%;
+}
+
+/* --- Acciones de Usuario --- */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Espacio entre iconos */
+}
+
+.nav-actions .material-symbols-outlined {
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-actions .material-symbols-outlined:hover {
+    color: var(--color-primary-accent);
+}
+
+#theme-switcher {
+    background: none;
+    border: none;
+    color: var(--color-text);
+}
+
+.cart-action {
+    position: relative;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: var(--color-primary-accent);
+    color: var(--color-background);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* --- Menú Móvil (Hamburguesa) --- */
+.mobile-menu-toggle {
+    display: none; /* Oculto en escritorio */
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--color-text);
+}
+
+/* --- Estilos Responsivos --- */
+@media (max-width: 992px) {
+    .main-header {
+        padding: 0 1rem;
+    }
+
+    .main-nav {
+        /* Ocultar la navegación de escritorio y mostrar el menú hamburguesa */
+        display: none; 
+    }
+
+    .mobile-menu-toggle {
+        display: block; /* Mostrar en móvil */
+        order: 3; /* Cambiar el orden para que aparezca a la derecha */
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+    
+    .navbar-logo {
+        order: 1;
+    }
+    
+    .nav-actions {
+        order: 2;
+        gap: 1rem;
+    }
+    
+    /* Ocultar el icono de búsqueda en móvil si se quiere integrar en el menú */
+    .nav-actions .search-icon {
+        display: none;
+    }
+}
+
+/* --- Panel de Navegación Móvil --- */
+.mobile-nav-panel {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Empieza fuera de la pantalla */
+    width: 80%;
+    max-width: 300px;
+    height: 100%;
+    background-color: var(--color-background);
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 1100;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav-panel.open {
+    left: 0; /* Lo trae a la pantalla */
+}
+
+.mobile-nav-panel .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.mobile-nav-panel ul {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.mobile-nav-panel ul a {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Overlay para oscurecer el fondo cuando el menú está abierto */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1050;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.nav-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
