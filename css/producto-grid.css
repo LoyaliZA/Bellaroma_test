@@ -125,6 +125,7 @@
     display: flex;
     gap: 10px; /* Espacio entre botones */
     margin-top: auto; /* Empuja el grupo al fondo */
+    flex-wrap: wrap; /* <-- ESTA ES LA CORRECCIÓN */
 }
 
 /* Base para ambos botones */
@@ -137,7 +138,8 @@
     font-weight: var(--font-weight-medium);
     transition: all 0.3s ease;
     font-size: 0.9rem;
-    white-space: nowrap; /* Evita que el texto se parta en escritorio */
+    /* white-space: nowrap;  <-- ELIMINADO */
+    min-width: 120px; /* Añadimos un ancho mínimo para que 'flex-wrap' funcione bien */
 }
 
 /* Botón "Ver Detalles" (Outline/Sutil) */
@@ -196,9 +198,7 @@
         gap: 8px;
     }
     
-    .product-cta-group a {
-        white-space: normal; 
-    }
+    /* Ya no es necesaria la regla 'white-space: normal' */
 }
 
 .product-details-list {
