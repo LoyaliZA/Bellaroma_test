@@ -1,5 +1,5 @@
 /* =================================
-   Archivo: js/main.js 
+   Archivo: js/main.js (CORREGIDO)
    ================================= */
 
 // Este es el punto de entrada principal para todo el JavaScript.
@@ -8,8 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Inicializar todos los módulos de JS
     console.log("DOM cargado. Inicializando scripts...");
+    
     initNavbar();
     initThemeSwitcher();
+    initHeroCarousel(); // <-- ESTA LÍNEA FUE AÑADIDA
+    
     console.log("Scripts inicializados.");
 
 });

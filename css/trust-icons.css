@@ -1,0 +1,64 @@
+/* =================================
+   Archivo: css/trust-icons.css 
+   ================================= */
+
+/* --- Sección de Iconos de Confianza --- */
+.trust-icons-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 20px;
+    margin: 40px auto;
+    background-color: var(--color-secondary-accent);
+    border-radius: 8px;
+    max-width: 1200px;
+}
+
+.trust-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1; 
+    padding: 10px;
+}
+
+.trust-icon-item .material-symbols-outlined {
+    font-size: 36px;
+    color: var(--color-primary-accent);
+    margin-bottom: 8px;
+    font-weight: 300; 
+}
+
+.trust-icon-item p {
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+/* Responsive: Apilar en móvil para evitar compresión */
+@media (max-width: 768px) {
+    .trust-icons-section {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 20px;
+    }
+    
+    .trust-icon-item {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--color-border);
+        width: 100%;
+    }
+    
+    .trust-icon-item:last-child {
+        border-bottom: none;
+    }
+
+    .trust-icon-item .material-symbols-outlined {
+        margin-right: 15px;
+        margin-bottom: 0;
+        font-size: 28px;
+    }
+}

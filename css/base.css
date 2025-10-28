@@ -1,63 +1,81 @@
 /* =================================
-   Archivo: css/base.css 
+   Archivo: css/base.css (Actualizado)
    ================================= */
+
+/* --- Variables Globales (Modo Claro por defecto) --- */
 :root {
-    /* Variables del Tema Claro (Default) */
+    /* Paleta de Colores - Deducida de tus otros archivos */
     --color-background: #FFFFFF;
     --color-text: #111111;
-    --color-primary-accent: #D4AF37; /* Un dorado sutil */
-    --color-secondary-accent: #F5F5F5; /* Un gris muy claro para fondos */
-    --color-border: #EAEAEA;
+    --color-primary-accent: #B8860B; /* Tono dorado/marrón (suposición) */
+    --color-secondary-accent: #F5F5F5; /* Un gris muy claro para barras */
+    --color-border: #E0E0E0;
+    --color-text-muted: #666666; /* NUEVA VARIABLE */
+
+    /* Control de logos para tema */
     --logo-display-light: block;
     --logo-display-dark: none;
+
+    /* Pesos de Fuente */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
 }
 
+/* --- Estilos para el Tema Oscuro --- */
 [data-theme="dark"] {
-    /* Variables del Tema Oscuro */
     --color-background: #121212;
-    --color-text: #EAEAEA;
-    --color-primary-accent: #D4AF37;
-    --color-secondary-accent: #1E1E1E;
-    --color-border: #2A2A2A;
+    --color-text: #FFFFFF;
+    --color-primary-accent: #D4AF37; /* Un dorado más brillante para oscuro */
+    --color-secondary-accent: #222222;
+    --color-border: #333333;
+    --color-text-muted: #AAAAAA; /* NUEVA VARIABLE */
+    
+    /* Invertir logos */
     --logo-display-light: none;
     --logo-display-dark: block;
 }
 
-/* Reseteo Básico */
-* {
+/* --- Reseteo Básico y Estilos Globales --- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
+html {
     font-family: 'Inter', sans-serif;
     background-color: var(--color-background);
     color: var(--color-text);
     transition: background-color 0.3s ease, color 0.3s ease;
+    scroll-behavior: smooth;
+    font-size: 16px; /* Base font size */
+}
+
+body {
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevenir scroll horizontal */
 }
 
 a {
-    color: inherit;
+    color: inherit; /* Hereda el color del texto */
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 ul {
     list-style: none;
 }
 
-/* Contenido de ejemplo para ver el scroll */
-.main-content {
-    padding: 5rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 200vh; /* Para forzar el scroll */
+img {
+    max-width: 100%;
+    display: block;
 }
-.main-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--font-weight-bold);
+    line-height: 1.2;
 }
-.main-content p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
+

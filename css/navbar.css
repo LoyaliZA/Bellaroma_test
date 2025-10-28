@@ -2,11 +2,28 @@
    Archivo: css/navbar.css 
    ================================= */
 
+/* --- Barra de Anuncios (Estática) --- */
+.announcement-bar {
+    background-color: var(--color-secondary-accent);
+    color: var(--color-text);
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-medium);
+    overflow: hidden; 
+    white-space: nowrap;
+}
+
+.announcement-bar p {
+    margin: 0;
+}
+
+
 /* --- Estilos Base de la Navbar --- */
 .main-header {
     background-color: var(--color-background);
     border-bottom: 1px solid var(--color-border);
-    padding: 0 2rem; /* Espaciado lateral */
+    padding: 0 2rem;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -17,7 +34,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px; /* Altura de la navbar */
+    height: 70px;
     max-width: 1600px;
     margin: 0 auto;
 }
@@ -29,7 +46,7 @@
 }
 
 .navbar-logo img {
-    height: 70px; /* Ajusta la altura de tu logo */
+    height: 70px;
     transition: opacity 0.3s ease;
 }
 .logo-light { display: var(--logo-display-light); }
@@ -38,12 +55,12 @@
 /* --- Navegación Principal (Escritorio) --- */
 .main-nav {
     display: flex;
-    gap: 2.5rem; /* Espacio entre enlaces */
+    gap: 2.5rem;
 }
 
 .main-nav a {
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     position: relative;
     padding: 0.5rem 0;
     transition: color 0.3s ease;
@@ -72,13 +89,14 @@
 .nav-actions {
     display: flex;
     align-items: center;
-    gap: 1.5rem; /* Espacio entre iconos */
+    gap: 1.5rem;
 }
 
 .nav-actions .material-symbols-outlined {
     font-size: 24px;
     cursor: pointer;
     transition: color 0.3s ease;
+    color: var(--color-text); /* Asegurar color inicial */
 }
 
 .nav-actions .material-symbols-outlined:hover {
@@ -89,6 +107,7 @@
     background: none;
     border: none;
     color: var(--color-text);
+    padding: 0; /* Quitar padding de botón */
 }
 
 .cart-action {
@@ -100,7 +119,7 @@
     top: -5px;
     right: -10px;
     background-color: var(--color-primary-accent);
-    color: var(--color-background);
+    color: var(--color-background); /* Texto blanco/claro */
     border-radius: 50%;
     width: 18px;
     height: 18px;
@@ -113,7 +132,7 @@
 
 /* --- Menú Móvil (Hamburguesa) --- */
 .mobile-menu-toggle {
-    display: none; /* Oculto en escritorio */
+    display: none;
     cursor: pointer;
     background: none;
     border: none;
@@ -127,13 +146,12 @@
     }
 
     .main-nav {
-        /* Ocultar la navegación de escritorio y mostrar el menú hamburguesa */
         display: none; 
     }
 
     .mobile-menu-toggle {
-        display: block; /* Mostrar en móvil */
-        order: 3; /* Cambiar el orden para que aparezca a la derecha */
+        display: block; 
+        order: 3;
     }
 
     .navbar {
@@ -149,7 +167,6 @@
         gap: 1rem;
     }
     
-    /* Ocultar el icono de búsqueda en móvil si se quiere integrar en el menú */
     .nav-actions .search-icon {
         display: none;
     }
@@ -159,7 +176,7 @@
 .mobile-nav-panel {
     position: fixed;
     top: 0;
-    left: -100%; /* Empieza fuera de la pantalla */
+    left: -100%;
     width: 80%;
     max-width: 300px;
     height: 100%;
@@ -173,7 +190,7 @@
 }
 
 .mobile-nav-panel.open {
-    left: 0; /* Lo trae a la pantalla */
+    left: 0;
 }
 
 .mobile-nav-panel .close-btn {

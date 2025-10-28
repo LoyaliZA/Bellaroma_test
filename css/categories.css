@@ -1,0 +1,83 @@
+/* =================================
+   Archivo: css/categories.css (NUEVO)
+   ================================= */
+
+.product-categories {
+    max-width: 1400px;
+    margin: 60px auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.product-categories h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: var(--font-weight-bold);
+}
+
+.categories-grid {
+    display: grid;
+    /* 4 columnas en escritorio, responsive abajo */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    position: relative;
+    aspect-ratio: 4 / 5; /* Proporción 4:5 */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end; /* Título abajo */
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+     transform: scale(1.03);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradiente sutil para legibilidad del texto */
+    background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 60%);
+    z-index: 1;
+}
+
+.category-title {
+    position: relative;
+    z-index: 2;
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-medium);
+    color: #FFFFFF; /* Texto siempre blanco sobre overlay */
+    text-align: left;
+    width: 100%;
+}
+
+/* --- Responsive para Móviles y Tablets --- */
+@media (max-width: 992px) {
+    .categories-grid {
+        grid-template-columns: 1fr 1fr; /* 2 columnas en tablet */
+    }
+    .product-categories {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .categories-grid {
+        grid-template-columns: 1fr; /* 1 columna en móvil */
+    }
+    .product-categories h2 {
+        font-size: 2rem;
+    }
+    .category-title {
+        font-size: 1.25rem;
+    }
+}

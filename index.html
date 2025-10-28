@@ -3,28 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bellaroma - Prototipo</title>
+    <title>Bellaroma - Prototipo V3 (Corregido)</title>
 
-    <!-- Google Material Symbols -->
+    <!-- Google Fonts Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     
-    <!-- Google Fonts (Ejemplo: Inter) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Hojas de Estilo Modulares -->
+    <!-- Hojas de Estilo CSS -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/trust-icons.css">
+    <link rel="stylesheet" href="css/categories.css">
+    <!-- ===== NUEVOS ESTILOS AÑADIDOS ===== -->
+    <link rel="stylesheet" href="css/producto-grid.css">
+    <link rel="stylesheet" href="css/brand-logo-bar.css">
 </head>
-<body>
+<body data-theme="light"> <!-- Inicia en modo claro por defecto -->
     
+    <div class="announcement-bar">
+        <p>Envío gratis en compras mayores a $999.00 MXN</p>
+    </div>
 
     <header class="main-header">
         <nav class="navbar">
             <div class="navbar-logo">
                 <a href="index.html">
+                    <!-- El logo claro se muestra en tema claro -->
                     <img src="assets/Bellaroma_logos/br_logo_negro_transparente.png" alt="Bellaroma Logo negro" class="logo-light">
+                    <!-- El logo oscuro (blanco) se muestra en tema oscuro -->
                     <img src="assets/Bellaroma_logos/br_logo_lanco_transparente.png" alt="Bellaroma Logo blanco" class="logo-dark">
                 </a>
             </div>
@@ -37,27 +48,26 @@
                 <li><a href="#">CONTACTO</a></li>
             </ul>
 
-            <!-- Bloque 3: Acciones de Usuario -->
             <div class="nav-actions">
-                <span class="material-symbols-outlined search-icon">search</span>
-                <span class="material-symbols-outlined account-icon">person</span>
+                <span class="material-symbols-outlined search-icon" aria-label="Buscar">search</span>
+                <span class="material-symbols-outlined account-icon" aria-label="Mi Cuenta">person</span>
                 <div class="cart-action">
-                    <span class="material-symbols-outlined cart-icon">shopping_bag</span>
+                    <span class="material-symbols-outlined cart-icon" aria-label="Carrito de compras">shopping_bag</span>
                     <span class="cart-badge">3</span>
                 </div>
-                <button id="theme-switcher" class="material-symbols-outlined">light_mode</button>
+                <!-- El texto cambia según el tema en theme-switcher.js -->
+                <button id="theme-switcher" class="material-symbols-outlined" aria-label="Alternar tema oscuro/claro">light_mode</button>
             </div>
 
-            <!-- Botón de Menú Móvil (Hamburguesa) -->
-            <button class="mobile-menu-toggle">
+            <button class="mobile-menu-toggle" aria-label="Abrir menú">
                 <span class="material-symbols-outlined">menu</span>
             </button>
         </nav>
     </header>
 
-    <!-- Panel de Navegación Móvil (Oculto por defecto) -->
+    <!-- Panel de Navegación Móvil -->
     <aside class="mobile-nav-panel">
-        <button class="close-btn"><span class="material-symbols-outlined">close</span></button>
+        <button class="close-btn" aria-label="Cerrar menú"><span class="material-symbols-outlined">close</span></button>
         <ul>
             <li><a href="#">INICIO</a></li>
             <li><a href="#">PERFUMES</a></li>
@@ -70,13 +80,273 @@
 
 
     <main class="main-content">
-        <h1>Bienvenido a Bellaroma</h1>
-        <p>Este es un contenido de ejemplo.</p>
+        <!-- SECCIÓN HERO CON CARRUSEL -->
+        <section class="hero-carousel" id="hero-carousel">
+            <div class="carousel-inner">
+                
+                <div class="carousel-item active" style="background-image: url('assets/Bellaroma_banner/banner1.png');">
+                    <div class="hero-image-overlay"></div>
+                    <div class="hero-content">
+                        <h1>Perfumes originales, como deben ser</h1>
+                        <p>Descubre cientos de fragancias exclusivas en nuestra tienda en línea.</p>
+                        <a href="#" class="cta-button">Comprar Novedades</a>
+                    </div>
+                </div>
+
+                <div class="carousel-item" style="background-image: url('assets/Bellaroma_banner/banner-2.png');">
+                    <div class="hero-image-overlay"></div>
+                    <div class="hero-content">
+                        <h1>Ahorra en tus Favoritos</h1>
+                        <p>Hasta 30% de descuento en marcas seleccionadas. ¡Por tiempo limitado!</p>
+                        <a href="#" class="cta-button">Ver Ofertas</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control prev" aria-label="Anterior">
+                <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <button class="carousel-control next" aria-label="Siguiente">
+                <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+
+            <div class="carousel-indicators" id="carousel-indicators">
+                <button class="indicator-dot active" data-slide-to="0" aria-label="Ir a la diapositiva 1"></button>
+                <button class="indicator-dot" data-slide-to="1" aria-label="Ir a la diapositiva 2"></button>
+            </div>
+        </section>
+        
+        <!-- ICONOS DE CONFIANZA -->
+        <section class="trust-icons-section">
+            <div class="trust-icon-item">
+                <span class="material-symbols-outlined">verified_user</span>
+                <p><strong>Autenticidad Garantizada</strong></p>
+            </div>
+            <div class="trust-icon-item">
+                <span class="material-symbols-outlined">local_shipping</span>
+                <p><strong>Envío Gratis</strong> a partir de $999</p>
+            </div>
+            <div class="trust-icon-item">
+                <span class="material-symbols-outlined">credit_card</span>
+                <p><strong>Pagos Seguros</strong> y meses sin intereses</p>
+            </div>
+            <div class="trust-icon-item">
+                <span class="material-symbols-outlined">cached</span>
+                <p><strong>Devoluciones Fáciles</strong></p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE CATEGORÍAS DE PRODUCTO -->
+        <section class="product-categories">
+            <h2>Explora Nuestra Colección</h2>
+            <div class="categories-grid">
+                
+                <a href="#" class="category-card" style="background-image: url('assets/categorias/perfumes-de-mujer-tienda.webp');">
+                    <div class="card-overlay"></div>
+                    <span class="category-title">Perfumes de Mujer</span>
+                </a>
+                
+                <a href="#" class="category-card" style="background-image: url('assets/categorias/perfumes-para-hombres.webp');">
+                    <div class="card-overlay"></div>
+                    <span class="category-title">Perfumes de Hombre</span>
+                </a>
+
+                <a href="#" class="category-card" style="background-image: url('assets/categorias/perfumes-unisex-tienda.webp');">
+                    <div class="card-overlay"></div>
+                    <span class="category-title">Perfumes Unisex</span>
+                </a>
+
+                <a href="#" class="category-card" style="background-image: url('assets/categorias/niños-general.png');">
+                    <div class="card-overlay"></div>
+                    <span class="category-title">Perfumes para Niños</span>
+                </a>
+            </div>
+        </section>
+        
+        <!-- ===================================== -->
+        <!-- ==== NUEVA SECCIÓN: LANZAMIENTOS ==== -->
+        <!-- ===================================== -->
+        <section class="product-grid-section">
+            <h2 class="section-title">Nuevos Lanzamientos</h2>
+            <p class="section-subtitle">Descubre las fragancias más recientes en nuestra colección.</p>
+            
+            <div class="product-grid">
+                <!-- Producto 1 (Ejemplo) -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://placehold.co/400x400/F5F5F5/CCC?text=Producto" alt="Nombre del Perfume">
+                        <span class="product-badge">Nuevo</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Armaf</span>
+                        <h3 class="product-name">Club de Nuit Intense Man</h3>
+                        <div class="product-price">
+                            <span class="sale-price">$980.00</span>
+                            <span class="original-price">$1,200.00</span>
+                        </div>
+                        <a href="#" class="product-cta-button">Ver Detalles</a>
+                    </div>
+                </div>
+                
+                <!-- Producto 2 (Ejemplo) -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://placehold.co/400x400/F5F5F5/CCC?text=Producto" alt="Nombre del Perfume">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Versace</span>
+                        <h3 class="product-name">Eros Flame EDP</h3>
+                        <div class="product-price">
+                            <span>$1,450.00</span>
+                        </div>
+                        <a href="#" class="product-cta-button">Ver Detalles</a>
+                    </div>
+                </div>
+
+                <!-- Producto 3 (Ejemplo) -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://placehold.co/400x400/F5F5F5/CCC?text=Producto" alt="Nombre del Perfume">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Mancera</span>
+                        <h3 class="product-name">Red Tobacco</h3>
+                        <div class="product-price">
+                            <span>$2,100.00</span>
+                        </div>
+                        <a href="#" class="product-cta-button">Ver Detalles</a>
+                    </div>
+                </div>
+
+                <!-- Producto 4 (Ejemplo) -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://placehold.co/400x400/F5F5F5/CCC?text=Producto" alt="Nombre del Perfume">
+                        <span class="product-badge">Nuevo</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Dior</span>
+                        <h3 class="product-name">Sauvage Elixir</h3>
+                        <div class="product-price">
+                            <span>$3,200.00</span>
+                        </div>
+                        <a href="#" class="product-cta-button">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================== -->
+        <!-- ===== NUEVA SECCIÓN: MARCAS ========= -->
+        <!-- ===================================== -->
+        <section class="brand-logo-bar">
+            <h2 class="section-title">Nuestras Marcas Favoritas</h2>
+            <p class="section-subtitle">Solo trabajamos con las marcas más reconocidas y valoradas.</p>
+            <div class="logo-scroll-container">
+                <div class="logo-scroller">
+                    <!-- Logos (usando placeholders, reemplaza con tus imágenes) -->
+                    <img src="https://placehold.co/150x50/FFFFFF/999999?text=ARMAF" alt="Armaf">
+                    <img src="https://placehold.co/150x50/FFFFFF/999999?text=CAROLINA+HERRERA" alt="Carolina Herrera">
+                    <img src="https://placehold.co/150x50/FFFFFF/999999?text=LANCOME" alt="Lancome">
+                    <img src="https://placehold.co/150x50/FFFFFF/999999?text=DIOR" alt="Dior">
+                    <img src="https://placehold.co/150x50/FFFFFF/999999?text=CALVIN+KLEIN" alt="Calvin Klein">
+                    <img src="https://placehold.co/150x50/FFFFFF/999999?text=BHARARA" alt="Bharara">
+                    <!-- Repetición para efecto infinito -->
+                    <img src="https://placehold.co/150x50/FFFFFF/999999?text=ARMAF" alt="Armaf">
+                    <img src="https://placehold.co/150x50/FFFFFF/999999?text=CAROLINA+HERRERA" alt="Carolina Herrera">
+                    <img src="https://placehold.co/150x50/FFFFFF/999999?text=LANCOME" alt="Lancome">
+                    <img src="https://placehold.co/150x50/FFFFFF/999999?text=DIOR" alt="Dior">
+                    <img src="https://placehold.co/150x50/FFFFFF/999999?text=CALVIN+KLEIN" alt="Calvin Klein">
+                    <img src="https://placehold.co/150x50/FFFFFF/999999?text=BHARARA" alt="Bharara">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================================== -->
+        <!-- == NUEVA SECCIÓN: MÁS VENDIDOS ====== -->
+        <!-- ===================================== -->
+        <section class="product-grid-section">
+            <h2 class="section-title">Los Más Vendidos</h2>
+            <p class="section-subtitle">Descubre lo que otras personas están comprando.</p>
+            
+            <div class="product-grid">
+                <!-- Producto 5 (Ejemplo) -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://placehold.co/400x400/F5F5F5/CCC?text=Producto" alt="Nombre del Perfume">
+                        <span class="product-badge" style="background-color: #c0392b;">Oferta</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Nautica</span>
+                        <h3 class="product-name">Voyage</h3>
+                        <div class="product-price">
+                            <span class="sale-price">$372.13</span>
+                            <span class="original-price">$700.00</span>
+                        </div>
+                        <a href="#" class="product-cta-button">Ver Detalles</a>
+                    </div>
+                </div>
+                
+                <!-- Producto 6 (Ejemplo) -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://placehold.co/400x400/F5F5F5/CCC?text=Producto" alt="Nombre del Perfume">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Paco Rabanne</span>
+                        <h3 class="product-name">One Million</h3>
+                        <div class="product-price">
+                            <span>$1,485.30</span>
+                        </div>
+                        <a href="#" class="product-cta-button">Ver Detalles</a>
+                    </div>
+                </div>
+
+                <!-- Producto 7 (Ejemplo) -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://placehold.co/400x400/F5F5F5/CCC?text=Producto" alt="Nombre del Perfume">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Lancome</span>
+                        <h3 class="product-name">La Vie Est Belle</h3>
+                        <div class="product-price">
+                            <span>$1,822.13</span>
+                        </div>
+                        <a href="#" class="product-cta-button">Ver Detalles</a>
+                    </div>
+                </div>
+
+                <!-- Producto 8 (Ejemplo) -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://placehold.co/400x400/F5F5F5/CCC?text=Producto" alt="Nombre del Perfume">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Carolina Herrera</span>
+                        <h3 class="product-name">Good Girl</h3>
+                        <div class="product-price">
+                            <span>$1,950.00</span>
+                        </div>
+                        <a href="#" class="product-cta-button">Ver Detalles</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contenido de ejemplo eliminado -->
+        <div style="height: 50vh;"></div> <!-- Espaciador al final -->
+
     </main>
 
-    <!-- Scripts Modulares -->
+    <!-- Scripts JS -->
     <script src="js/navbar.js"></script>
     <script src="js/theme-switcher.js"></script>
+    <script src="js/hero_carousel.js"></script>
+    <!-- main.js debe ir al final para llamar a las funciones de los otros scripts -->
     <script src="js/main.js"></script>
 </body>
 </html>
+

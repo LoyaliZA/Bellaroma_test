@@ -9,13 +9,16 @@ const initThemeSwitcher = () => {
         return;
     }
 
-    // Función para aplicar el tema guardado en localStorage
+    // Función para aplicar el tema guardado en localStorage o el preferido por el sistema
     const applyStoredTheme = () => {
         const storedTheme = localStorage.getItem('theme');
-        if (storedTheme) {
-            document.documentElement.setAttribute('data-theme', storedTheme);
-            switcher.textContent = storedTheme === 'dark' ? 'dark_mode' : 'light_mode';
-        }
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        // Prioridad: 1. LocalStorage, 2. Preferencia del sistema
+        const defaultTheme = storedTheme ? storedTheme : (systemPrefersDark ? 'dark' : 'light');
+        
+        document.documentElement.setAttribute('data-theme', defaultTheme);
+        switcher.textContent = defaultTheme === 'dark' ? 'dark_mode' : 'light_mode';
     };
 
     switcher.addEventListener('click', () => {
