@@ -67,7 +67,8 @@
 
 @media (max-width: 576px) {
     .categories-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
     }
     .product-categories h2 {
         font-size: 2rem;
