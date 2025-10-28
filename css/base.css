@@ -6,7 +6,8 @@
     --color-primary-accent: #B8860B; 
     --color-secondary-accent: #F5F5F5; 
     --color-border: #E0E0E0;
-    --color-text-muted: #666666; 
+    --color-text-muted: #666666;
+    --color-text-black: #111111;
 
     --logo-display-light: block;
     --logo-display-dark: none;
