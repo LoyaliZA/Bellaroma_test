@@ -1,42 +1,34 @@
-/* =================================
-   Archivo: css/base.css (Actualizado)
-   ================================= */
 
-/* --- Variables Globales (Modo Claro por defecto) --- */
 :root {
-    /* Paleta de Colores - Deducida de tus otros archivos */
+    
     --color-background: #FFFFFF;
     --color-text: #111111;
-    --color-primary-accent: #B8860B; /* Tono dorado/marrón (suposición) */
-    --color-secondary-accent: #F5F5F5; /* Un gris muy claro para barras */
+    --color-primary-accent: #B8860B; 
+    --color-secondary-accent: #F5F5F5; 
     --color-border: #E0E0E0;
-    --color-text-muted: #666666; /* NUEVA VARIABLE */
+    --color-text-muted: #666666; 
 
-    /* Control de logos para tema */
     --logo-display-light: block;
     --logo-display-dark: none;
 
-    /* Pesos de Fuente */
+
     --font-weight-regular: 400;
     --font-weight-medium: 500;
     --font-weight-bold: 700;
 }
 
-/* --- Estilos para el Tema Oscuro --- */
 [data-theme="dark"] {
     --color-background: #121212;
     --color-text: #FFFFFF;
     --color-primary-accent: #D4AF37; /* Un dorado más brillante para oscuro */
     --color-secondary-accent: #222222;
     --color-border: #333333;
-    --color-text-muted: #AAAAAA; /* NUEVA VARIABLE */
+    --color-text-muted: #AAAAAA;
     
-    /* Invertir logos */
     --logo-display-light: none;
     --logo-display-dark: block;
 }
 
-/* --- Reseteo Básico y Estilos Globales --- */
 *,
 *::before,
 *::after {
@@ -51,16 +43,16 @@ html {
     color: var(--color-text);
     transition: background-color 0.3s ease, color 0.3s ease;
     scroll-behavior: smooth;
-    font-size: 16px; /* Base font size */
+    font-size: 16px;
 }
 
 body {
     line-height: 1.6;
-    overflow-x: hidden; /* Prevenir scroll horizontal */
+    overflow-x: hidden;
 }
 
 a {
-    color: inherit; /* Hereda el color del texto */
+    color: inherit;
     text-decoration: none;
     transition: color 0.3s ease;
 }

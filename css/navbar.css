@@ -1,8 +1,4 @@
-/* =================================
-   Archivo: css/navbar.css 
-   ================================= */
 
-/* --- Barra de Anuncios (Estática) --- */
 .announcement-bar {
     background-color: var(--color-secondary-accent);
     color: var(--color-text);
@@ -19,7 +15,6 @@
 }
 
 
-/* --- Estilos Base de la Navbar --- */
 .main-header {
     background-color: var(--color-background);
     border-bottom: 1px solid var(--color-border);
@@ -39,7 +34,6 @@
     margin: 0 auto;
 }
 
-/* --- Logo --- */
 .navbar-logo a {
     display: flex;
     align-items: center;
@@ -52,7 +46,6 @@
 .logo-light { display: var(--logo-display-light); }
 .logo-dark { display: var(--logo-display-dark); }
 
-/* --- Navegación Principal (Escritorio) --- */
 .main-nav {
     display: flex;
     gap: 2.5rem;
@@ -66,7 +59,6 @@
     transition: color 0.3s ease;
 }
 
-/* Efecto hover con línea inferior */
 .main-nav a::after {
     content: '';
     position: absolute;
@@ -85,7 +77,6 @@
     width: 100%;
 }
 
-/* --- Acciones de Usuario --- */
 .nav-actions {
     display: flex;
     align-items: center;
@@ -96,7 +87,7 @@
     font-size: 24px;
     cursor: pointer;
     transition: color 0.3s ease;
-    color: var(--color-text); /* Asegurar color inicial */
+    color: var(--color-text);
 }
 
 .nav-actions .material-symbols-outlined:hover {
@@ -107,7 +98,7 @@
     background: none;
     border: none;
     color: var(--color-text);
-    padding: 0; /* Quitar padding de botón */
+    padding: 0;
 }
 
 .cart-action {
@@ -119,7 +110,7 @@
     top: -5px;
     right: -10px;
     background-color: var(--color-primary-accent);
-    color: var(--color-background); /* Texto blanco/claro */
+    color: var(--color-background);
     border-radius: 50%;
     width: 18px;
     height: 18px;
@@ -130,7 +121,6 @@
     font-weight: 600;
 }
 
-/* --- Menú Móvil (Hamburguesa) --- */
 .mobile-menu-toggle {
     display: none;
     cursor: pointer;
@@ -139,7 +129,6 @@
     color: var(--color-text);
 }
 
-/* --- Estilos Responsivos --- */
 @media (max-width: 992px) {
     .main-header {
         padding: 0 1rem;
@@ -172,7 +161,6 @@
     }
 }
 
-/* --- Panel de Navegación Móvil --- */
 .mobile-nav-panel {
     position: fixed;
     top: 0;
@@ -215,7 +203,6 @@
     font-weight: 500;
 }
 
-/* Overlay para oscurecer el fondo cuando el menú está abierto */
 .nav-overlay {
     position: fixed;
     top: 0;

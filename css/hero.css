@@ -1,8 +1,4 @@
-/* =================================
-   Archivo: css/hero.css 
-   ================================= */
 
-/* --- Contenedor Principal del Carrusel --- */
 .hero-carousel {
     min-height: 700px; 
     height: 70vh;
@@ -20,7 +16,6 @@
     transition: transform 0.5s ease-in-out;
 }
 
-/* --- Estilo de cada Diapositiva --- */
 .carousel-item {
     min-width: 100%;
     flex-shrink: 0;
@@ -47,13 +42,12 @@
 .hero-content {
     position: relative;
     z-index: 2;
-    color: #FFFFFF; /* Texto siempre blanco sobre overlay oscuro */
+    color: #FFFFFF;
     padding: 20px 5%;
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     
-    /* Alineación a la izquierda */
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -75,7 +69,6 @@
     max-width: 600px;
 }
 
-/* --- Estilo del Botón de Llamada a la Acción (CTA) --- */
 .cta-button {
     display: inline-block;
     background-color: var(--color-primary-accent);
@@ -96,7 +89,6 @@
     border-color: var(--color-primary-accent);
 }
 
-/* --- Controles del Carrusel (Flechas) --- */
 .carousel-control {
     position: absolute;
     top: 50%;
@@ -129,7 +121,6 @@
     font-size: 30px;
 }
 
-/* --- Indicadores (Puntos) --- */
 .carousel-indicators {
     position: absolute;
     bottom: 20px;
@@ -151,13 +142,12 @@
 }
 
 .indicator-dot.active {
-    background-color: #FFFFFF; /* Siempre blanco */
+    background-color: #FFFFFF;
     width: 12px;
     height: 12px;
 }
 
 
-/* Responsive para dispositivos móviles */
 @media (max-width: 768px) {
     .hero-carousel {
         min-height: 50vh;

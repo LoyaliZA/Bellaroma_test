@@ -1,6 +1,4 @@
-/* =================================
-   Archivo: css/brand-logo-bar.css (NUEVO)
-   ================================= */
+
 
 .brand-logo-bar {
     background-color: var(--color-secondary-accent);
@@ -10,7 +8,6 @@
     overflow: hidden;
 }
 
-/* Títulos dentro de la barra de marcas */
 .brand-logo-bar .section-title {
     margin-bottom: 10px;
 }
@@ -20,33 +17,30 @@
 
 .logo-scroll-container {
     width: 100%;
-    /* Efecto de desvanecido en los bordes */
     -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
     mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
 }
 
 .logo-scroller {
     display: flex;
-    width: max-content; /* Importante para la animación */
+    width: max-content; 
     flex-wrap: nowrap;
-    gap: 60px; /* Espacio entre logos */
+    gap: 60px; 
     
-    /* Animación */
-    animation: scroll 30s linear infinite;
+    animation: scroll 20s linear infinite;
 }
 
 .logo-scroller img {
-    height: 40px; /* Altura uniforme */
+    height: 50px; 
     max-width: 180px;
     object-fit: contain;
-    /* Logos en gris, se colorean al hacer hover */
     filter: grayscale(100%);
     opacity: 0.6;
-    transition: all 0.3s ease;
+    transition: all 0.7s ease;
 }
 
 .logo-scroller:hover img {
-    opacity: 0.4; /* Bajar opacidad a todos */
+    opacity: 0.4;
 }
 
 .logo-scroller img:hover {
@@ -55,7 +49,6 @@
     transform: scale(1.1);
 }
 
-/* Manejo de logos en Tema Oscuro (invertir colores) */
 [data-theme="dark"] .logo-scroller img {
     filter: grayscale(100%) invert(100%);
     opacity: 0.7;
@@ -66,27 +59,23 @@
     opacity: 1;
 }
 
-/* Pausar animación en hover */
 .logo-scroller:hover {
     animation-play-state: paused;
 }
 
-/* Animación de desplazamiento */
 @keyframes scroll {
     from {
         transform: translateX(0);
     }
     to {
-        /* Desplaza la mitad del ancho (porque duplicamos los logos) */
         transform: translateX(-50%);
     }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .logo-scroller {
         gap: 40px;
-        animation-duration: 25s; /* Más rápido en móvil */
+        animation-duration: 25s;
     }
     .logo-scroller img {
         height: 30px;
