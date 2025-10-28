@@ -1,0 +1,159 @@
+/* =================================
+   Archivo: css/footer.css 
+   ================================= */
+
+.main-footer {
+    width: 100%;
+    color: var(--color-footer-text);
+}
+
+/* --- Parte Superior (Logo) --- */
+.footer-upper {
+    background-color: var(--color-footer-upper);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.footer-logo {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* --- Parte Media (Contenido) --- */
+.footer-middle {
+    background-color: var(--color-footer-middle);
+    padding: 50px 2rem;
+}
+
+.footer-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* 4 columnas en escritorio, se ajustan solas */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.footer-column h4 {
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-footer-text);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links li a {
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+    color: var(--color-background); /* O un blanco/color claro */
+    text-decoration: underline;
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: flex-start; /* Alinea ícono con la primera línea de texto */
+    gap: 12px;
+}
+
+.footer-contact .material-symbols-outlined {
+    font-size: 20px;
+    margin-top: 2px;
+    color: var(--color-footer-text);
+}
+
+.footer-contact strong {
+    font-weight: var(--font-weight-bold);
+    display: block; /* Para que el texto <p> vaya abajo */
+}
+.footer-contact p {
+    line-height: 1.4;
+}
+
+.footer-socials-title {
+    margin-top: 2rem; /* Espacio antes de Redes Sociales */
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-socials a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-background); /* Círculo blanco */
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    padding: 4px; /* Espacio para la imagen placeholder */
+}
+
+.footer-socials a:hover {
+    transform: scale(1.1);
+}
+.footer-socials a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* --- Parte Inferior (Copyright) --- */
+.footer-bottom {
+    background-color: var(--color-footer-bottom);
+    color: var(--color-footer-bottom-text);
+    padding: 25px 2rem;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.footer-bottom p {
+    margin-bottom: 5px;
+}
+
+.footer-bottom a {
+    color: var(--color-footer-bottom-text);
+    text-decoration: underline;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .footer-grid {
+        /* Pasa a 2 columnas en tablet */
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer-middle {
+        padding: 40px 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-grid {
+        /* 1 columna en móvil */
+        grid-template-columns: 1fr;
+    }
+    .footer-bottom {
+        padding: 20px 1rem;
+        font-size: 0.8rem;
+    }
+}

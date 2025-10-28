@@ -1,0 +1,70 @@
+/* =======================================
+   Archivo: css/full-width-banner.css 
+   ======================================= */
+
+.full-width-cta-banner {
+    position: relative; /* Para el overlay y contenido */
+    width: 100%; /* Ocupa todo el ancho */
+    min-height: 400px; /* Altura mínima, ajustable */
+    padding: 4rem 2rem; /* Espaciado interno */
+    margin: 60px 0; /* Espacio arriba y abajo */
+    
+    /* Imagen de fondo - SE APLICA EN EL HTML CON style="" */
+    background-size: cover;
+    background-position: center; 
+    
+    display: flex; /* Para centrar el contenido verticalmente */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden; /* Por si acaso */
+}
+
+/* Reutilizamos la clase del overlay del carrusel */
+.full-width-cta-banner .hero-image-overlay {
+    background-color: rgba(0, 0, 0, 0.55); /* Mantenemos el overlay oscuro */
+}
+
+/* Contenedor específico para el texto y botón de este banner */
+.full-width-cta-content {
+    position: relative;
+    z-index: 2; /* Encima del overlay */
+    color: #FFFFFF; /* Texto blanco */
+    max-width: 700px; /* Ancho máximo del texto */
+}
+
+.full-width-cta-content h2 {
+    font-size: clamp(2rem, 4vw, 3rem); /* Tamaño adaptable */
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 1rem;
+}
+
+.full-width-cta-content p {
+    font-size: clamp(1rem, 1.5vw, 1.15rem); /* Tamaño adaptable */
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9); /* Blanco un poco transparente */
+}
+
+/* Reutilizamos el estilo de botón */
+.full-width-cta-content .cta-button {
+     /* Ya hereda colores y estilos, podemos ajustar si es necesario */
+     font-size: 1rem; /* Un poco más pequeño quizás */
+     padding: 10px 25px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .full-width-cta-banner {
+        min-height: 300px; /* Menos altura en móvil */
+        padding: 3rem 1rem;
+    }
+     .full-width-cta-content h2 {
+        font-size: 1.8rem;
+    }
+    .full-width-cta-content p {
+        font-size: 0.95rem;
+    }
+    .full-width-cta-content .cta-button {
+        font-size: 0.9rem;
+    }
+}
