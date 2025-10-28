@@ -191,19 +191,16 @@
         font-size: 0.95rem;
     }
 
-    /* --- INICIO DE LA CORRECCIÓN MÓVIL --- */
     .product-cta-group {
-        flex-direction: column; /* Apila los botones verticalmente */
-        gap: 8px; /* Espacio entre botones apilados */
+        flex-direction: column;
+        gap: 8px;
     }
     
     .product-cta-group a {
-        white-space: normal; /* Permite que el texto se parta (ej. "Agregar al carrito") */
+        white-space: normal; 
     }
-    /* --- FIN DE LA CORRECCIÓN MÓVIL --- */
 }
 
-/* --- Lista de Detalles --- */
 .product-details-list {
     list-style: none;
     padding: 0;
@@ -224,7 +221,6 @@
     color: var(--color-text);
 }
 
-/* --- Ajustes Tema Oscuro --- */
 [data-theme="dark"] .product-details-list li strong {
     color: var(--color-text-muted);
 }
@@ -241,7 +237,6 @@
 
 [data-theme="dark"] .product-cta-button-add {
     color: var(--color-text-black);
-    /* Texto oscuro en botón dorado */
 }
 
 [data-theme="dark"] .product-cta-button-add:hover {

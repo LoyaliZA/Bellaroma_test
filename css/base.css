@@ -21,7 +21,7 @@
 [data-theme="dark"] {
     --color-background: #121212;
     --color-text: #FFFFFF;
-    --color-primary-accent: #D4AF37; /* Un dorado más brillante para oscuro */
+    --color-primary-accent: #D4AF37; 
     --color-secondary-accent: #222222;
     --color-border: #333333;
     --color-text-muted: #AAAAAA;
