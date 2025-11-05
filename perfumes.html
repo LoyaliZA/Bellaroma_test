@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes - Bellaroma</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/producto-grid.css">
+    <link rel="stylesheet" href="css/pagina-productos.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <link rel="icon" type="image/png" href="assets/Bellaroma_logos/br_logo_dorado_transparente-relleno.png">
+</head>
+
+<body data-theme="light">
+
+    <div class="announcement-bar">
+        <p>Envío gratis en compras mayores a $2,500</p>
+    </div>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <a href="index.html">
+                    <img src="assets/Bellaroma_logos/br_logo_negro_transparente.png" alt="Bellaroma Logo negro"
+                        class="logo-light">
+                    <img src="assets/Bellaroma_logos/br_logo_lanco_transparente.png" alt="Bellaroma Logo blanco"
+                        class="logo-dark">
+                </a>
+            </div>
+
+            <ul class="main-nav">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="perfumes.html" class="active">PERFUMES</a></li>
+                <li><a href="#">PERFUMES POR MAYOREO</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">CONTACTO</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <span class="material-symbols-outlined search-icon" aria-label="Buscar">search</span>
+                <span class="material-symbols-outlined account-icon" aria-label="Mi Cuenta">person</span>
+                <div class="cart-action">
+                    <span class="material-symbols-outlined cart-icon"
+                        aria-label="Carrito de compras">shopping_bag</span>
+                    <span class="cart-badge">3</span>
+                </div>
+                <button id="theme-switcher" class="material-symbols-outlined"
+                    aria-label="Alternar tema oscuro/claro">light_mode</button>
+            </div>
+
+            <button class="mobile-menu-toggle" aria-label="Abrir menú">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+    </header>
+
+    <aside class="mobile-nav-panel">
+        <button class="close-btn" aria-label="Cerrar menú"><span class="material-symbols-outlined">close</span></button>
+        <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="perfumes.html">PERFUMES</a></li>
+            <li><a href="#">PERFUMES POR MAYOREO</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">CONTACTO</a></li>
+        </ul>
+    </aside>
+    <div class="nav-overlay"></div>
+
+    <main class="main-content">
+
+        <div class="breadcrumb-container">
+            <nav class="breadcrumb">
+                <a href="index.html">Inicio</a>
+                <span class="material-symbols-outlined">chevron_right</span>
+                <span>Perfumes</span>
+            </nav>
+        </div>
+
+        <div class="productos-page-title">
+            <h1>Perfumes</h1>
+            <p>Mostrando 1-12 de 128 resultados</p>
+        </div>
+
+        <div class="productos-container">
+            
+            <aside id="filtros-sidebar">
+                <h3>Filtrar por</h3>
+
+                <div class="filter-group">
+                    <details open>
+                        <summary>
+                            <span>Categorías</span>
+                            <span class="material-symbols-outlined icon-toggle">expand_more</span>
+                        </summary>
+                        <ul class="filter-list">
+                            <li><a href="#">Perfumes de Mujer</a></li>
+                            <li><a href="#">Perfumes de Hombre</a></li>
+                            <li><a href="#">Perfumes Unisex</a></li>
+                            <li><a href="#">Niños</a></li>
+                            <li><a href="#">Niñas</a></li>
+                        </ul>
+                    </details>
+                </div>
+
+                <div class="filter-group">
+                    <details open>
+                        <summary>
+                            <span>Marcas</span>
+                            <span class="material-symbols-outlined icon-toggle">expand_more</span>
+                        </summary>
+                        <div class="filter-list-scrollable">
+                            <ul class="filter-list">
+                                <li><a href="#">Abercrombie</a></li>
+                                <li><a href="#">Adidas</a></li>
+                                <li><a href="#">Adolfo Dominguez</a></li>
+                                <li><a href="#">Al Haramain</a></li>
+                                <li><a href="#">Alejandra Sanz</a></li>
+                                <li><a href="#">Animale</a></li>
+                                <li><a href="#">Antonio Banderas</a></li>
+                                <li><a href="#">Aquolina</a></li>
+                                <li><a href="#">Aramis</a></li>
+                                <li><a href="#">Armaf</a></li>
+                                <li><a href="#">Azzaro</a></li>
+                                <li><a href="#">Barcelona</a></li>
+                                <li><a href="#">Benetton</a></li>
+                                <li><a href="#">Bharara</a></li>
+                                <li><a href="#">Calvin Klein</a></li>
+                                <li><a href="#">Carolina Herrera</a></li>
+                                <li><a href="#">Dior</a></li>
+                                <li><a href="#">Lancome</a></li>
+                                <li><a href="#">Nautica</a></li>
+                                <li><a href="#">Paco Rabanne</a></li>
+                                <li><a href="#">Shakira</a></li>
+                                <li><a href="#">Versace</a></li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="filter-group">
+                    <details>
+                        <summary>
+                            <span>Precio</span>
+                            <span class="material-symbols-outlined icon-toggle">expand_more</span>
+                        </summary>
+                        <div class="filter-price-content">
+                            <p>Próximamente...</p>
+                        </div>
+                    </details>
+                </div>
+            </aside>
+            
+            <section id="product-listing">
+                <div class="sorting-controls">
+                    <label for="sort-by">Ordenar por:</label>
+                    <select id="sort-by" name="sort-by">
+                        <option value="default">Por defecto</option>
+                        <option value="newest">Nuevos lanzamientos</option>
+                        <option value="price-low-high">Precio: más bajo a más alto</option>
+                        <option value="price-high-low">Precio: más alto a más bajo</option>
+                    </select>
+                </div>
+
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="assets/nuevos-lanzamientos/armaf-club-de-nuit-intense-man-limited-edition-perfume-hombre.webp"
+                                alt="Nombre del Perfume">
+                            <span class="product-badge">Nuevo</span>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Armaf</span>
+                            <h3 class="product-name">Club de Nuit Intense Man</h3>
+                            <ul class="product-details-list">
+                                <li><strong>Presentación:</strong> 70 ml</li>
+                                <li><strong>Tipo:</strong> Parfum</li>
+                                <li><strong>Familia Olfativa:</strong> Amaderada</li>
+                            </ul>
+                            <div class="product-price">
+                                <span class="sale-price">$980.00</span>
+                                <span class="original-price">$1,200.00</span>
+                            </div>
+                            <div class="product-cta-group">
+                                <a href="#" class="product-cta-button-details">Ver Detalles</a>
+                                <a href="#" class="product-cta-button-add">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="assets/nuevos-lanzamientos/versace-bright-crystal-perfume-mujer.webp"
+                                alt="Nombre del Perfume">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Versace</span>
+                            <h3 class="product-name">Versace Bright Crystal</h3>
+                            <ul class="product-details-list">
+                                <li><strong>Presentación:</strong> 100 ml</li>
+                                <li><strong>Tipo:</strong> EDP</li>
+                                <li><strong>Familia Olfativa:</strong> Dulce, Frutal</li>
+                            </ul>
+                            <div class="product-price">
+                                <span>$1,450.00</span>
+                            </div>
+                            <div class="product-cta-group">
+                                <a href="#" class="product-cta-button-details">Ver Detalles</a>
+                                <a href="#" class="product-cta-button-add">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="assets/nuevos-lanzamientos/christian-dior-sauvage-perfume-caballero.jpg"
+                                alt="Nombre del Perfume">
+                            <span class="product-badge">Nuevo</span>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Dior</span>
+                            <h3 class="product-name">Sauvage Elixir</h3>
+                            <ul class="product-details-list">
+                                <li><strong>Presentación:</strong> 70 ml</li>
+                                <li><strong>Tipo:</strong> Parfum</li>
+                                <li><strong>Familia Olfativa:</strong> Amaderada</li>
+                            </ul>
+                            <div class="product-price">
+                                <span>$3,200.00</span>
+                            </div>
+                            <div class="product-cta-group">
+                                <a href="#" class="product-cta-button-details">Ver Detalles</a>
+                                <a href="#" class="product-cta-button-add">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="assets/mas-vendidos/nautica-voyage-perfume-caballero.webp" alt="Nombre del Perfume">
+                            <span class="product-badge" style="background-color: #c0392b;">Oferta</span>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Nautica</span>
+                            <h3 class="product-name">Voyage Parfum Hombre</h3>
+                            <ul class="product-details-list">
+                                <li><strong>Presentación:</strong> 100 ml</li>
+                                <li><strong>Tipo:</strong> EDP</li>
+                                <li><strong>Familia Olfativa:</strong> Dulce, Cítrica</li>
+                            </ul>
+                            <div class="product-price">
+                                <span class="sale-price">$372.13</span>
+                                <span class="original-price">$700.00</span>
+                            </div>
+                            <div class="product-cta-group">
+                                <a href="#" class="product-cta-button-details">Ver Detalles</a>
+                                <a href="#" class="product-cta-button-add">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="assets/mas-vendidos/paco-rabanne-1-million-royal-perfume-hombre.webp"
+                                alt="Nombre del Perfume">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Paco Rabanne</span>
+                            <h3 class="product-name">One Million</h3>
+                            <ul class="product-details-list">
+                                <li><strong>Presentación:</strong> 100 ml</li>
+                                <li><strong>Tipo:</strong> EDP</li>
+                                <li><strong>Familia Olfativa:</strong> Dulce, Cítrica</li>
+                            </ul>
+                            <div class="product-price">
+                                <span>$1,485.30</span>
+                            </div>
+                            <div class="product-cta-group">
+                                <a href="#" class="product-cta-button-details">Ver Detalles</a>
+                                <a href="#" class="product-cta-button-add">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="assets/mas-vendidos/lancome-la-vie-est-belle-perfume-mujer.jpg"
+                                alt="Nombre del Perfume">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Lancome</span>
+                            <h3 class="product-name">La Vie Est Belle</h3>
+                            <ul class="product-details-list">
+                                <li><strong>Presentación:</strong> 100 ml</li>
+                                <li><strong>Tipo:</strong> EDP</li>
+                                <li><strong>Familia Olfativa:</strong> Dulce, Cítrica</li>
+                            </ul>
+                            <div class="product-price">
+                                <span>$1,822.13</span>
+                            </div>
+                            <div class="product-cta-group">
+                                <a href="#" class="product-cta-button-details">Ver Detalles</a>
+                                <a href="#" class="product-cta-button-add">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="assets/mas-vendidos/carolina-herrera-very-good-girl-glam-perfume-mujer.jpg"
+                                alt="Nombre del Perfume">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Carolina Herrera</span>
+                            <h3 class="product-name">Good Girl</h3>
+                            <ul class="product-details-list">
+                                <li><strong>Presentación:</strong> 100 ml</li>
+                                <li><strong>Tipo:</strong> EDP</li>
+                                <li><strong>Familia Olfativa:</strong> Dulce, Cítrica</li>
+                            </ul>
+                            <div class="product-price">
+                                <span>$1,950.00</span>
+                            </div>
+                            <div class="product-cta-group">
+                                <a href="#" class="product-cta-button-details">Ver Detalles</a>
+                                <a href="#" class="product-cta-button-add">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="assets/nuevos-lanzamientos/shakira-dance-red-midnight-perfume-mujer.jpg"
+                                alt="Nombre del Perfume">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Shakira</span>
+                            <h3 class="product-name">Shakira Red Midnight</h3>
+                            <ul class="product-details-list">
+                                <li><strong>Presentación:</strong> 100 ml</li>
+                                <li><strong>Tipo:</strong> EDP</li>
+                                <li><strong>Familia Olfativa:</strong> Dulce, Cítrica</li>
+                            </ul>
+                            <div class="product-price">
+                                <span>$2,100.00</span>
+                            </div>
+                            <div class="product-cta-group">
+                                <a href="#" class="product-cta-button-details">Ver Detalles</a>
+                                <a href="#" class="product-cta-button-add">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer class="main-footer">
+
+        <div class="footer-upper">
+            <img src="assets/Bellaroma_logos/br_logo_dorado_transparente-norelleno.png" alt="Bellaroma Logo Dorado"
+                class="footer-logo">
+        </div>
+
+        <div class="footer-middle">
+            <div class="footer-grid">
+
+                <div class="footer-column">
+                    <h4>Perfumes</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Perfumes de mujer</a></li>
+                        <li><a href="#">Perfumes para hombre</a></li>
+                        <li><a href="#">Perfumes unisex</a></li>
+                        <li><a href="#">Niños</a></li>
+                        <li><a href="#">Niñas</a></li>
+                        <li><a href="#">Bebés</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Mi Cuenta</a></li>
+                        <li><a href="#">Perfumes por Mayoreo</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Políticas de Devolución</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Datos de Contacto</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="material-symbols-outlined">location_on</span>
+                            <div>
+                                <strong>Dirección:</strong>
+                                <p>Carmen Cadena de Buendia No. 136-3, Col. Nueva Villahermosa, C.P. 86070, Villahermosa
+                                    Tabasco</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">call</span>
+                            <div>
+                                <strong>Teléfono:</strong>
+                                <p>993 131 0889</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">mail</span>
+                            <div>
+                                <strong>Email:</strong>
+                                <p>contacto@bellaroma.mx</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>WhatsApp</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <strong>Venta tienda en línea:</strong>
+                            <p>993 143 9292</p>
+                        </li>
+                        <li>
+                            <strong>Venta mayoreo:</strong>
+                            <p>993 425 2552</p>
+                        </li>
+                    </ul>
+                    <h4 class="footer-socials-title">Redes Sociales</h4>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><img src="https://placehold.co/32x32/ffffff/B8860B?text=F"
+                                alt="Facebook"></a>
+                        <a href="#" aria-label="Instagram"><img src="https://placehold.co/32x32/ffffff/B8860B?text=I"
+                                alt="Instagram"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p><a href="#">Políticas de privacidad</a> / <a href="#">Términos y condiciones</a></p>
+            <p>Bellaroma © Derechos reservados 2025. Diseñado por Jesús Gabriel De la Cruz Zárate.</p>
+        </div>
+
+    </footer>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/hero_carousel.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
