@@ -95,68 +95,69 @@
             
             <aside id="filtros-sidebar">
                 <h3>Filtrar por</h3>
-
-                <div class="filter-group">
-                    <details open>
-                        <summary>
-                            <span>Categorías</span>
-                            <span class="material-symbols-outlined icon-toggle">expand_more</span>
-                        </summary>
-                        <ul class="filter-list">
-                            <li><a href="#">Perfumes de Mujer</a></li>
-                            <li><a href="#">Perfumes de Hombre</a></li>
-                            <li><a href="#">Perfumes Unisex</a></li>
-                            <li><a href="#">Niños</a></li>
-                            <li><a href="#">Niñas</a></li>
-                        </ul>
-                    </details>
-                </div>
-
-                <div class="filter-group">
-                    <details open>
-                        <summary>
-                            <span>Marcas</span>
-                            <span class="material-symbols-outlined icon-toggle">expand_more</span>
-                        </summary>
-                        <div class="filter-list-scrollable">
+                <div class="filter-content">
+                    <div class="filter-group">
+                        <details open>
+                            <summary>
+                                <span>Categorías</span>
+                                <span class="material-symbols-outlined icon-toggle">expand_more</span>
+                            </summary>
                             <ul class="filter-list">
-                                <li><a href="#">Abercrombie</a></li>
-                                <li><a href="#">Adidas</a></li>
-                                <li><a href="#">Adolfo Dominguez</a></li>
-                                <li><a href="#">Al Haramain</a></li>
-                                <li><a href="#">Alejandra Sanz</a></li>
-                                <li><a href="#">Animale</a></li>
-                                <li><a href="#">Antonio Banderas</a></li>
-                                <li><a href="#">Aquolina</a></li>
-                                <li><a href="#">Aramis</a></li>
-                                <li><a href="#">Armaf</a></li>
-                                <li><a href="#">Azzaro</a></li>
-                                <li><a href="#">Barcelona</a></li>
-                                <li><a href="#">Benetton</a></li>
-                                <li><a href="#">Bharara</a></li>
-                                <li><a href="#">Calvin Klein</a></li>
-                                <li><a href="#">Carolina Herrera</a></li>
-                                <li><a href="#">Dior</a></li>
-                                <li><a href="#">Lancome</a></li>
-                                <li><a href="#">Nautica</a></li>
-                                <li><a href="#">Paco Rabanne</a></li>
-                                <li><a href="#">Shakira</a></li>
-                                <li><a href="#">Versace</a></li>
+                                <li><a href="#">Perfumes de Mujer</a></li>
+                                <li><a href="#">Perfumes de Hombre</a></li>
+                                <li><a href="#">Perfumes Unisex</a></li>
+                                <li><a href="#">Niños</a></li>
+                                <li><a href="#">Niñas</a></li>
                             </ul>
-                        </div>
-                    </details>
-                </div>
+                        </details>
+                    </div>
 
-                <div class="filter-group">
-                    <details>
-                        <summary>
-                            <span>Precio</span>
-                            <span class="material-symbols-outlined icon-toggle">expand_more</span>
-                        </summary>
-                        <div class="filter-price-content">
-                            <p>Próximamente...</p>
-                        </div>
-                    </details>
+                    <div class="filter-group">
+                        <details open>
+                            <summary>
+                                <span>Marcas</span>
+                                <span class="material-symbols-outlined icon-toggle">expand_more</span>
+                            </summary>
+                            <div class="filter-list-scrollable">
+                                <ul class="filter-list">
+                                    <li><a href="#">Abercrombie</a></li>
+                                    <li><a href="#">Adidas</a></li>
+                                    <li><a href="#">Adolfo Dominguez</a></li>
+                                    <li><a href="#">Al Haramain</a></li>
+                                    <li><a href="#">Alejandra Sanz</a></li>
+                                    <li><a href="#">Animale</a></li>
+                                    <li><a href="#">Antonio Banderas</a></li>
+                                    <li><a href="#">Aquolina</a></li>
+                                    <li><a href="#">Aramis</a></li>
+                                    <li><a href="#">Armaf</a></li>
+                                    <li><a href="#">Azzaro</a></li>
+                                    <li><a href="#">Barcelona</a></li>
+                                    <li><a href="#">Benetton</a></li>
+                                    <li><a href="#">Bharara</a></li>
+                                    <li><a href="#">Calvin Klein</a></li>
+                                    <li><a href="#">Carolina Herrera</a></li>
+                                    <li><a href="#">Dior</a></li>
+                                    <li><a href="#">Lancome</a></li>
+                                    <li><a href="#">Nautica</a></li>
+                                    <li><a href="#">Paco Rabanne</a></li>
+                                    <li><a href="#">Shakira</a></li>
+                                    <li><a href="#">Versace</a></li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="filter-group">
+                        <details>
+                            <summary>
+                                <span>Precio</span>
+                                <span class="material-symbols-outlined icon-toggle">expand_more</span>
+                            </summary>
+                            <div class="filter-price-content">
+                                <p>Próximamente...</p>
+                            </div>
+                        </details>
+                    </div>
                 </div>
             </aside>
             
@@ -459,9 +460,92 @@
 
     </footer>
 
+    <button id="mobile-filter-btn" class="floating-action-button" aria-label="Abrir filtros">
+        <span class="material-symbols-outlined">filter_alt</span>
+        <span>Filtrar</span>
+    </button>
+
+    <aside id="offcanvas-filter-panel">
+        <div class="offcanvas-header">
+            <h3>Filtrar por</h3>
+            <button class="close-btn" aria-label="Cerrar filtros"><span class="material-symbols-outlined">close</span></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="filter-group">
+                <details open>
+                    <summary>
+                        <span>Categorías</span>
+                        <span class="material-symbols-outlined icon-toggle">expand_more</span>
+                    </summary>
+                    <ul class="filter-list">
+                        <li><a href="#">Perfumes de Mujer</a></li>
+                        <li><a href="#">Perfumes de Hombre</a></li>
+                        <li><a href="#">Perfumes Unisex</a></li>
+                        <li><a href="#">Niños</a></li>
+                        <li><a href="#">Niñas</a></li>
+                    </ul>
+                </details>
+            </div>
+
+            <div class="filter-group">
+                <details open>
+                    <summary>
+                        <span>Marcas</span>
+                        <span class="material-symbols-outlined icon-toggle">expand_more</span>
+                    </summary>
+                    <div class="filter-list-scrollable">
+                        <ul class="filter-list">
+                            <li><a href="#">Abercrombie</a></li>
+                            <li><a href="#">Adidas</a></li>
+                            <li><a href="#">Adolfo Dominguez</a></li>
+                            <li><a href="#">Al Haramain</a></li>
+                            <li><a href="#">Alejandra Sanz</a></li>
+                            <li><a href="#">Animale</a></li>
+                            <li><a href="#">Antonio Banderas</a></li>
+                            <li><a href="#">Aquolina</a></li>
+                            <li><a href="#">Aramis</a></li>
+                            <li><a href="#">Armaf</a></li>
+                            <li><a href="#">Azzaro</a></li>
+                            <li><a href="#">Barcelona</a></li>
+                            <li><a href="#">Benetton</a></li>
+                            <li><a href="#">Bharara</a></li>
+                            <li><a href="#">Calvin Klein</a></li>
+                            <li><a href="#">Carolina Herrera</a></li>
+                            <li><a href="#">Dior</a></li>
+                            <li><a href="#">Lancome</a></li>
+                            <li><a href="#">Nautica</a></li>
+                            <li><a href="#">Paco Rabanne</a></li>
+                            <li><a href="#">Shakira</a></li>
+                            <li><a href="#">Versace</a></li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+
+            <div class="filter-group">
+                <details>
+                    <summary>
+                        <span>Precio</span>
+                        <span class="material-symbols-outlined icon-toggle">expand_more</span>
+                    </summary>
+                    <div class="filter-price-content">
+                        <p>Próximamente...</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+        <div class="offcanvas-footer">
+            <button class="btn btn-secondary" id="clear-filters-btn">Limpiar</button>
+            <button class="btn btn-primary" id="apply-filters-btn">Aplicar</button>
+        </div>
+    </aside>
+    <div class="nav-overlay" id="filter-overlay"></div>
+
+
     <script src="js/navbar.js"></script>
     <script src="js/theme-switcher.js"></script>
     <script src="js/hero_carousel.js"></script>
+    <script src="js/pagina-productos.js"></script>
     <script src="js/main.js"></script>
 </body>
 
