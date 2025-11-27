@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle de producto - Bellaroma</title>
+    <title>Carolina Herrera Very Good Girl Glam - Bellaroma</title>
+
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/producto-grid.css">
@@ -18,7 +20,408 @@
 
     <link rel="icon" type="image/png" href="assets/Bellaroma_logos/br_logo_dorado_transparente-relleno.png">
 </head>
+
 <body data-theme="light">
-    
+
+    <div class="announcement-bar">
+        <p>Envío gratis en compras mayores a $2,500</p>
+    </div>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <a href="index.html">
+                    <img src="assets/Bellaroma_logos/br_logo_negro_transparente.png" alt="Bellaroma Logo negro"
+                        class="logo-light">
+                    <img src="assets/Bellaroma_logos/br_logo_lanco_transparente.png" alt="Bellaroma Logo blanco"
+                        class="logo-dark">
+                </a>
+            </div>
+            <ul class="main-nav">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="perfumes.html" class="active">PERFUMES</a></li>
+                <li><a href="#">PERFUMES POR MAYOREO</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">CONTACTO</a></li>
+            </ul>
+            <div class="nav-actions">
+                <span class="material-symbols-outlined search-icon">search</span>
+                <span class="material-symbols-outlined account-icon">person</span>
+                <div class="cart-action">
+                    <span class="material-symbols-outlined cart-icon">shopping_bag</span>
+                    <span class="cart-badge">3</span>
+                </div>
+                <button id="theme-switcher" class="material-symbols-outlined">light_mode</button>
+            </div>
+            <button class="mobile-menu-toggle">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+    </header>
+
+    <aside class="mobile-nav-panel">
+        <button class="close-btn"><span class="material-symbols-outlined">close</span></button>
+        <ul>
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="perfumes.html">PERFUMES</a></li>
+            <li><a href="#">PERFUMES POR MAYOREO</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#">CONTACTO</a></li>
+        </ul>
+    </aside>
+    <div class="nav-overlay"></div>
+
+    <main class="main-content">
+
+        <div class="breadcrumb-container">
+            <nav class="breadcrumb">
+                <a href="index.html">Inicio</a>
+                <span class="material-symbols-outlined">chevron_right</span>
+                <a href="perfumes.html">Perfumes</a>
+                <span class="material-symbols-outlined">chevron_right</span>
+                <a href="perfumes.html">Mujer</a>
+                <span class="material-symbols-outlined">chevron_right</span>
+                <span>CH Very Good Girl Glam</span>
+            </nav>
+        </div>
+
+        <section class="product-detail-hero">
+            <div class="product-gallery">
+                <div class="main-image-container">
+                    <img src="assets/mas-vendidos/carolina-herrera-very-good-girl-glam-perfume-mujer.jpg"
+                        alt="Carolina Herrera Very Good Girl Glam" id="main-product-img">
+                </div>
+                <div class="gallery-thumbnails">
+                    <img src="assets/mas-vendidos/carolina-herrera-very-good-girl-glam-perfume-mujer.jpg" class="active"
+                        alt="Vista 1">
+                    <img src="assets/mas-vendidos/carolina-herrera-very-good-girl-glam-perfume-mujer.jpg"
+                        style="filter: hue-rotate(90deg);" alt="Vista 2">
+                    <img src="assets/mas-vendidos/carolina-herrera-very-good-girl-glam-perfume-mujer.jpg"
+                        style="filter: hue-rotate(180deg);" alt="Vista 3">
+                </div>
+            </div>
+
+            <div class="product-main-info">
+                <div class="product-brand">Carolina Herrera</div>
+                <h1 class="product-title-large">Very Good Girl Glam EDP para Mujer</h1>
+
+                <div class="price-block">
+                    <span class="current-price">$2,225.96</span>
+                    <span class="old-price">$2,263.07</span>
+                </div>
+
+                <div class="stock-status status-out-of-stock">
+                    <span class="material-symbols-outlined">block</span> Agotado
+                </div>
+
+                <div class="short-description">
+                    <ul>
+                        <li><strong>Presentación:</strong> 80 ML</li>
+                        <li><strong>Tipo:</strong> Eau de Parfum (EDP)</li>
+                        <li><strong>Familia Olfativa:</strong> Floral Frutal</li>
+                    </ul>
+                </div>
+
+                <div class="payment-promo-box">
+                    <span class="material-symbols-outlined">payments</span>
+                    <p>Paga en hasta 12 quincenas con <strong>KueskiPay</strong>.</p>
+                </div>
+
+                <div class="product-actions">
+                    <div class="quantity-selector disabled"> <button>-</button>
+                        <input type="text" value="1" readonly>
+                        <button>+</button>
+                    </div>
+                    <button class="btn-add-cart disabled" disabled>Agotado</button>
+                    <button class="btn-wishlist" aria-label="Agregar a favoritos">
+                        <span class="material-symbols-outlined">favorite</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-tabs-section">
+            <div class="tabs-header">
+                <button class="tab-btn active" data-tab="descripcion">Descripción</button>
+                <button class="tab-btn" data-tab="adicional">Información Adicional</button>
+                <button class="tab-btn" data-tab="envios">Envíos y Garantías</button>
+            </div>
+
+            <div class="tabs-content">
+
+                <div class="tab-pane active" id="descripcion">
+                    <div class="description-block">
+                        <p><strong>Carolina Herrera Very Good Girl Glam</strong> es una oda a la feminidad sin
+                            complejos, una evolución audaz del icónico perfume. Esta fragancia, envuelta en un
+                            deslumbrante stiletto rojo con glitter, celebra a la mujer que es divertida, fabulosa y no
+                            teme ser el centro de todas las miradas.</p>
+
+                        <h3>Experiencia Olfativa</h3>
+                        <div class="notes-grid">
+                            <div class="note-item">
+                                <span class="note-label">Notas de Salida</span>
+                                <p>Cereza ácida (guinda) y Almendra amarga.</p>
+                            </div>
+                            <div class="note-item">
+                                <span class="note-label">Notas de Corazón</span>
+                                <p>Rosa y Azucena.</p>
+                            </div>
+                            <div class="note-item">
+                                <span class="note-label">Notas de Fondo</span>
+                                <p>Vainilla Bourbon y Vetiver.</p>
+                            </div>
+                        </div>
+
+                        <h3>Personalidad</h3>
+                        <p>La personalidad del Very Good Girl Glam es deslumbrante, audaz y adictiva. La apertura es una
+                            explosión jugosa y dulce de cereza que capta la atención inmediatamente. Además, el corazón
+                            revela un bouquet floral elegante.</p>
+
+                        <h3>Preguntas Frecuentes</h3>
+                        <details class="faq-item">
+                            <summary>¿En qué se diferencia del Good Girl original?</summary>
+                            <p>La principal diferencia es la nota de cereza. Mientras que el Good Girl original es
+                                famoso por su contraste de nardos y cacao, Very Good Girl Glam reemplaza esa oscuridad
+                                con una nota de cereza brillante y jugosa.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>¿Es una fragancia muy pesada para uso diario?</summary>
+                            <p>Debido a su intensidad y su carácter dulce, es principalmente una fragancia para la noche
+                                o para ocasiones especiales.</p>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="tab-pane" id="adicional">
+                    <table class="specs-table">
+                        <tbody>
+                            <tr>
+                                <th>Peso</th>
+                                <td>1 kg</td>
+                            </tr>
+                            <tr>
+                                <th>Dimensiones</th>
+                                <td>13 × 13 × 17 cm</td>
+                            </tr>
+                            <tr>
+                                <th>Presentación</th>
+                                <td>Medianos (50-89 ml)</td>
+                            </tr>
+                            <tr>
+                                <th>Tipo de fragancia</th>
+                                <td>Floral, Frutal</td>
+                            </tr>
+                            <tr>
+                                <th>Tipo de producto</th>
+                                <td>Agua de perfume EDP</td>
+                            </tr>
+                            <tr>
+                                <th>Concentración</th>
+                                <td>15% – 20%</td>
+                            </tr>
+                            <tr>
+                                <th>Duración promedio</th>
+                                <td>8 a 10 horas, aproximadamente.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tab-pane" id="envios">
+                    <div class="shipping-info-block">
+                        <div class="info-card">
+                            <span class="material-symbols-outlined">local_shipping</span>
+                            <h4>Envíos Nacionales</h4>
+                            <p>Todos los pedidos son enviados a través de Estafeta Express con cobertura en todo México.
+                                Tiempo estimado: 1 a 3 días hábiles.</p>
+                        </div>
+                        <div class="info-card">
+                            <span class="material-symbols-outlined">home_pin</span>
+                            <h4>Entrega Local (Villahermosa)</h4>
+                            <p>Para residentes en Villahermosa, Tabasco, ofrecemos entrega en 24 horas posteriores a la
+                                confirmación del pedido.</p>
+                        </div>
+                        <div class="info-card">
+                            <span class="material-symbols-outlined">currency_exchange</span>
+                            <h4>Costo de Envío</h4>
+                            <p>$99.00 MXN para pedidos menores a $2,500.00 MXN. <strong>Gratis</strong> en compras
+                                superiores.</p>
+                        </div>
+                        <div class="info-card wide">
+                            <span class="material-symbols-outlined">assignment_return</span>
+                            <h4>Devoluciones</h4>
+                            <p>Debido a que son artículos de uso personal, solo se aceptan devoluciones si el producto
+                                está cerrado, en sus mismas condiciones o presenta defecto de fabricación.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="product-grid-section">
+            <h2 class="section-title">También te podría gustar</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/mas-vendidos/lancome-la-vie-est-belle-perfume-mujer.jpg" alt="Perfume">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Lancome</span>
+                        <h3 class="product-name">La Vie Est Belle</h3>
+                        <div class="product-price"><span>$1,822.13</span></div>
+                        <div class="product-cta-group">
+                            <a href="#" class="product-cta-button-details">Ver Detalles</a>
+                            <a href="#" class="product-cta-button-add">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/nuevos-lanzamientos/versace-bright-crystal-perfume-mujer.webp" alt="Perfume">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Versace</span>
+                        <h3 class="product-name">Versace Bright Crystal</h3>
+                        <div class="product-price"><span>$1,450.00</span></div>
+                        <div class="product-cta-group">
+                            <a href="#" class="product-cta-button-details">Ver Detalles</a>
+                            <a href="#" class="product-cta-button-add">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/nuevos-lanzamientos/shakira-dance-red-midnight-perfume-mujer.jpg"
+                            alt="Perfume">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Shakira</span>
+                        <h3 class="product-name">Shakira Red Midnight</h3>
+                        <div class="product-price"><span>$2,100.00</span></div>
+                        <div class="product-cta-group">
+                            <a href="#" class="product-cta-button-details">Ver Detalles</a>
+                            <a href="#" class="product-cta-button-add">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/mas-vendidos/carolina-herrera-very-good-girl-glam-perfume-mujer.jpg"
+                            alt="Perfume">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Carolina Herrera</span>
+                        <h3 class="product-name">Good Girl</h3>
+                        <div class="product-price"><span>$1,950.00</span></div>
+                        <div class="product-cta-group">
+                            <a href="#" class="product-cta-button-details">Ver Detalles</a>
+                            <a href="#" class="product-cta-button-add">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+
+        <div class="footer-upper">
+            <img src="assets/Bellaroma_logos/br_logo_dorado_transparente-norelleno.png" alt="Bellaroma Logo Dorado"
+                class="footer-logo">
+        </div>
+
+        <div class="footer-middle">
+            <div class="footer-grid">
+
+                <div class="footer-column">
+                    <h4>Perfumes</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Perfumes de mujer</a></li>
+                        <li><a href="#">Perfumes para hombre</a></li>
+                        <li><a href="#">Perfumes unisex</a></li>
+                        <li><a href="#">Niños</a></li>
+                        <li><a href="#">Niñas</a></li>
+                        <li><a href="#">Bebés</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Mi Cuenta</a></li>
+                        <li><a href="#">Perfumes por Mayoreo</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Políticas de Devolución</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Datos de Contacto</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="material-symbols-outlined">location_on</span>
+                            <div>
+                                <strong>Dirección:</strong>
+                                <p>Carmen Cadena de Buendia No. 136-3, Col. Nueva Villahermosa, C.P. 86070, Villahermosa
+                                    Tabasco</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">call</span>
+                            <div>
+                                <strong>Teléfono:</strong>
+                                <p>993 131 0889</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">mail</span>
+                            <div>
+                                <strong>Email:</strong>
+                                <p>contacto@bellaroma.mx</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>WhatsApp</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <strong>Venta tienda en línea:</strong>
+                            <p>993 143 9292</p>
+                        </li>
+                        <li>
+                            <strong>Venta mayoreo:</strong>
+                            <p>993 425 2552</p>
+                        </li>
+                    </ul>
+                    <h4 class="footer-socials-title">Redes Sociales</h4>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><img src="https://placehold.co/32x32/ffffff/B8860B?text=F"
+                                alt="Facebook"></a>
+                        <a href="#" aria-label="Instagram"><img src="https://placehold.co/32x32/ffffff/B8860B?text=I"
+                                alt="Instagram"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p><a href="#">Políticas de privacidad</a> / <a href="#">Términos y condiciones</a></p>
+            <p>Bellaroma © Derechos reservados 2025. Diseñado por Jesús Gabriel De la Cruz Zárate.</p>
+        </div>
+
+    </footer>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/theme-switcher.js"></script>
+    <script src="js/detalle-producto.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
