@@ -90,16 +90,24 @@ document.addEventListener('DOMContentLoaded', () => {
     /* js/mayoreo.js - Agrega esto dentro del DOMContentLoaded */
 
     // --- LÓGICA DEL STEPPER (SUMADOR) ---
+    // --- LÓGICA DEL STEPPER (SUMADOR) ---
     const stepperButtons = document.querySelectorAll('.btn-stepper');
 
     stepperButtons.forEach(btn => {
+        // CORRECCIÓN: Usamos 'click' (funciona bien en móvil si el CSS está arreglado)
         btn.addEventListener('click', (e) => {
-            // Evitar que el botón envíe formularios si está dentro de uno
+            // 1. Evitar que el botón envíe formularios
             e.preventDefault();
+            // 2. CORRECCIÓN VITAL: Evitar que el click "suba" a la tarjeta del producto
+            e.stopPropagation(); 
 
             // Identificar elementos cercanos
             const container = btn.closest('.stepper-control');
             const input = container.querySelector('input');
+            
+            // Verificación de seguridad: si no encuentra el input, detenerse
+            if (!input) return;
+
             const btnMinus = container.querySelector('.btn-stepper.minus');
             const btnPlus = container.querySelector('.btn-stepper.plus');
             
@@ -113,7 +121,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (currentVal < maxVal) {
                     currentVal++;
                 } else {
-                    // Feedback visual si intentan pasar el límite
                     alert(`El límite para compra directa es de ${maxVal} unidades.`);
                 }
             } else if (btn.classList.contains('minus')) {
@@ -125,27 +132,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // Actualizar input
             input.value = currentVal;
 
-            // Actualizar estado de botones (deshabilitar si llega al límite)
-            btnMinus.disabled = (currentVal <= minVal);
-            btnPlus.disabled = (currentVal >= maxVal);
+            // Actualizar estado de botones
+            if (btnMinus) btnMinus.disabled = (currentVal <= minVal);
+            if (btnPlus) btnPlus.disabled = (currentVal >= maxVal);
 
-            // IMPORTANTE: Disparar evento 'input' manualmente para que 
-            // la función calculateTotals() (tu barra flotante) se entere del cambio.
+            // Disparar evento para actualizar la barra de precios
             input.dispatchEvent(new Event('input'));
         });
-    });
-
-    // Validar estado inicial de los botones al cargar
-    document.querySelectorAll('.qty-standard').forEach(input => {
-        const container = input.closest('.stepper-control');
-        if(container) {
-            const btnMinus = container.querySelector('.btn-stepper.minus');
-            const btnPlus = container.querySelector('.btn-stepper.plus');
-            const val = parseInt(input.value) || 0;
-            const max = parseInt(input.getAttribute('max')) || 10;
-            
-            btnMinus.disabled = (val <= 0);
-            btnPlus.disabled = (val >= max);
-        }
     });
 });

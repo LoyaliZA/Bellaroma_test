@@ -807,6 +807,11 @@
     cursor: pointer;
     transition: background-color 0.2s;
     color: var(--color-text);
+    
+    /* CORRECCIÓN MÓVIL 1: Evita el zoom al hacer doble tap rápido */
+    touch-action: manipulation; 
+    /* CORRECCIÓN MÓVIL 2: Evita el resaltado azul/gris nativo al tocar en Android/iOS */
+    -webkit-tap-highlight-color: transparent;
 }
 
 .btn-stepper:hover {
@@ -825,6 +830,29 @@
 .btn-stepper .material-symbols-outlined {
     font-size: 18px;
     font-weight: 600;
+}
+
+/* CORRECCIÓN MÓVIL 3: Ignorar clicks en el ícono para que siempre los reciba el botón */
+@media (hover: hover) {
+    .btn-stepper:hover {
+        background-color: #e0e0e0;
+    }
+}
+
+.btn-stepper:active {
+    background-color: #d0d0d0;
+}
+
+.btn-stepper:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.btn-stepper .material-symbols-outlined {
+    font-size: 18px;
+    font-weight: 600;
+    /* CORRECCIÓN MÓVIL 4: Ignorar clicks en el ícono para que siempre los reciba el botón */
+    pointer-events: none; 
 }
 
 /* Ajuste del Input Central */
