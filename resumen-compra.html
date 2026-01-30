@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumen de Compra - Mayoreo</title>
+    <title>Checkout Mayoreo - Bellaroma</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/mayoreo.css">
@@ -17,7 +17,7 @@
             <div class="navbar-logo"><img src="assets/Bellaroma_logos/br_logo_negro_transparente.png" style="height:60px;"></div>
             <div class="nav-actions">
                 <a href="catalogo-mayoreo.html" style="display:flex; align-items:center; gap:5px;">
-                    <span class="material-symbols-outlined">arrow_back</span> Seguir comprando
+                    <span class="material-symbols-outlined">arrow_back</span> Modificar Pedido
                 </a>
             </div>
         </nav>
@@ -26,30 +26,91 @@
     <div class="checkout-grid">
         <div class="details-column">
             
+            <section class="order-section info-group-row">
+                <div class="info-block">
+                    <div class="block-header">
+                        <h3><span class="material-symbols-outlined">local_shipping</span> Dirección de Envío</h3>
+                        <a href="#" class="edit-link">Editar</a>
+                    </div>
+                    <p class="recipient"><strong>Abarrotes del Centro (Juan Pérez)</strong></p>
+                    <p>Av. Paseo Tabasco 1405</p>
+                    <p>Col. Tabasco 2000, CP 86035</p>
+                    <p>Villahermosa, Tabasco</p>
+                    <p class="contact-info">Tel: 993-123-4567</p>
+                </div>
+                
+                <div class="info-block">
+                    <div class="block-header">
+                        <h3><span class="material-symbols-outlined">receipt_long</span> Datos de Facturación</h3>
+                        <a href="#" class="edit-link">Editar</a>
+                    </div>
+                    <p><strong>Razón Social:</strong> JUAN PEREZ LOPEZ</p>
+                    <p><strong>RFC:</strong> PELJ900101XYZ</p>
+                    <p><strong>Régimen:</strong> 612 - Personas Físicas</p>
+                    <p><strong>Uso CFDI:</strong> G03 - Gastos en general</p>
+                    <div class="invoice-check">
+                        <span class="material-symbols-outlined checked">check_box</span> Se requiere factura
+                    </div>
+                </div>
+            </section>
+
             <section class="order-section">
-                <h3>Orden de Pago Inmediato (Disponibilidad Garantizada)</h3>
+                <div class="section-title-badge">
+                    <h3>Orden de Pago Inmediato</h3>
+                    <span class="badge-success">Stock Garantizado</span>
+                </div>
+                
                 <div id="standard-items-list">
-                    <div class="order-item">
+                    <div class="order-item extended">
                         <img src="assets/mas-vendidos/carolina-herrera-very-good-girl-glam-perfume-mujer.jpg">
                         <div class="order-details">
-                            <h4>Good Girl Glam 80ml</h4>
-                            <p>Cantidad: 5</p>
-                            <p><strong>$9,250.00</strong></p>
+                            <div class="item-header">
+                                <h4>Good Girl Glam 80ml</h4>
+                                <span class="sku">SKU: CH-GGG-80</span>
+                            </div>
+                            <div class="price-calculation">
+                                <span class="unit-price">$1,850.00 x 5 pzas</span>
+                                <span class="line-total">$9,250.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-item extended">
+                        <img src="assets/nuevos-lanzamientos/versace-bright-crystal-perfume-mujer.webp">
+                        <div class="order-details">
+                            <div class="item-header">
+                                <h4>Versace Bright Crystal</h4>
+                                <span class="sku">SKU: VER-BC-90</span>
+                            </div>
+                            <div class="price-calculation">
+                                <span class="unit-price">$1,350.00 x 2 pzas</span>
+                                <span class="line-total">$2,700.00</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="order-section" style="border-left: 4px solid #c62828;">
-                <h3 style="color: #c62828;">Solicitud de Volumen (Sujeto a Disponibilidad)</h3>
-                <p style="font-size: 0.9rem; margin-bottom: 1rem;">Estos artículos no se cobrarán ahora. Un asesor confirmará el stock y enviará la liga de pago.</p>
+            <section class="order-section volume-section">
+                <div class="section-title-badge">
+                    <h3 style="color: #c62828;">Solicitud de Volumen Extra</h3>
+                    <span class="badge-warning">Requiere Validación</span>
+                </div>
+                <p class="volume-note">
+                    <span class="material-symbols-outlined">info</span>
+                    Estos artículos <strong>NO se cobrarán ahora</strong>. Un asesor verificará el inventario en bodega y te enviará una liga de pago complementaria en menos de 2 horas.
+                </p>
                 <div id="bulk-items-list">
-                    <div class="order-item">
+                    <div class="order-item extended">
                         <img src="assets/mas-vendidos/carolina-herrera-very-good-girl-glam-perfume-mujer.jpg">
                         <div class="order-details">
-                            <h4>Good Girl Glam 80ml</h4>
-                            <p>Cantidad Adicional Solicitada: <strong>15</strong></p>
-                            <p class="warning-text">Pendiente de validación</p>
+                            <div class="item-header">
+                                <h4>Good Girl Glam 80ml</h4>
+                                <span class="sku">SKU: CH-GGG-80</span>
+                            </div>
+                            <div class="price-calculation">
+                                <span class="unit-price-pending">Solicitado: 15 pzas adicionales</span>
+                                <span class="line-status">Pendiente</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -58,24 +119,45 @@
 
         <div class="summary-column">
             <div class="summary-card">
-                <h3>Resumen</h3>
+                <h3>Resumen Financiero</h3>
+                
                 <div class="summary-row">
-                    <span>Subtotal (Garantizado)</span>
-                    <span>$9,250.00</span>
+                    <span>Subtotal</span>
+                    <span>$11,950.00</span>
                 </div>
                 <div class="summary-row">
-                    <span>Envío Estimado</span>
-                    <span>Gratis</span>
+                    <span>Envío (Paquete Express)</span>
+                    <span style="color:var(--color-primary-accent); font-weight:600;">Gratis</span>
                 </div>
-                <div class="summary-total summary-row">
-                    <span>Total a Pagar Ahora</span>
-                    <span>$9,250.00</span>
+                <div class="summary-row">
+                    <span>IVA (16%)</span>
+                    <span>$1,912.00</span>
                 </div>
                 
-                <button class="btn-primary" style="width: 100%; margin-top: 1rem;">Pagar Orden Garantizada</button>
-                <p style="font-size:0.8rem; text-align:center; margin-top:10px; color:var(--color-text-muted);">
-                    Al confirmar, se enviará la solicitud de los artículos adicionales automáticamente.
-                </p>
+                <div class="summary-total summary-row">
+                    <span>Total a Pagar</span>
+                    <span>$13,862.00</span>
+                </div>
+
+                <div class="payment-method-preview">
+                    <label>Método de Pago</label>
+                    <div class="selected-method">
+                        <span class="material-symbols-outlined">credit_card</span>
+                        Tarjeta de Crédito/Débito
+                        <a href="#" style="margin-left:auto; font-size:0.8rem;">Cambiar</a>
+                    </div>
+                </div>
+
+                
+                <button class="btn-primary" style="width: 100%; margin-top: 1rem;">
+                    Confirmar y Pagar
+                    <span class="material-symbols-outlined" style="font-size:18px; margin-left:5px;">lock</span>
+                </button>
+                
+                <div class="terms-text">
+                    <input type="checkbox" id="terms" checked>
+                    <label for="terms">Acepto los <a href="#">términos y condiciones</a> de mayoreo y la política de validación de stock.</label>
+                </div>
             </div>
         </div>
     </div>
