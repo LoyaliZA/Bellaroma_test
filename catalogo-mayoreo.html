@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Mayoreo - Bellaroma</title>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/producto-grid.css">
+    <link rel="stylesheet" href="css/pagina-productos.css">
+    <link rel="stylesheet" href="css/mayoreo.css">
+</head>
+
+<body data-theme="light">
+
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <img src="assets/Bellaroma_logos/br_logo_negro_transparente.png" alt="Logo" style="height: 60px;">
+            </div>
+            <ul class="main-nav">
+                <li><a href="#" class="active">CATÁLOGO</a></li>
+                <li><a href="rastreo-pedido.html">MIS PEDIDOS</a></li>
+            </ul>
+            <div class="nav-actions">
+                <span>Cliente: <strong>#8821</strong></span>
+                <div class="cart-action" onclick="window.location.href='resumen-compra.html'" style="cursor: pointer;">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="productos-page-title">
+            <h1>Catálogo de Mayoreo</h1>
+            <p>Seleccione las unidades requeridas.</p>
+        </div>
+
+        <div class="productos-container">
+            <aside id="filtros-sidebar">
+                <h3>Filtrar por</h3>
+                <div class="filter-group">
+                    <details open>
+                        <summary><span>Marca</span><span
+                                class="material-symbols-outlined icon-toggle">expand_more</span></summary>
+                        <ul class="filter-list">
+                            <li><a href="#">Carolina Herrera</a></li>
+                            <li><a href="#">Paco Rabanne</a></li>
+                            <li><a href="#">Versace</a></li>
+                        </ul>
+                    </details>
+                </div>
+                <div class="filter-group">
+                    <details open>
+                        <summary><span>Mililitros</span><span
+                                class="material-symbols-outlined icon-toggle">expand_more</span></summary>
+                        <ul class="filter-list">
+                            <li><a href="#">50 ml</a></li>
+                            <li><a href="#">100 ml</a></li>
+                            <li><a href="#">150 ml</a></li>
+                            <li><a href="#">200 ml</a></li>
+                        </ul>
+                    </details>
+                </div>
+            </aside>
+
+            <section id="product-listing">
+                <div class="product-grid">
+
+                    
+                    <div class="product-card wholesale-card">
+                        <div class="product-image-container">
+                            <img src="assets/mas-vendidos/carolina-herrera-very-good-girl-glam-perfume-mujer.jpg"
+                                alt="CH Good Girl">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Carolina Herrera</span>
+                            <h3 class="product-name">Good Girl Glam 80ml</h3>
+                            <div class="product-price"><span>$1,850.00 MXN</span></div>
+                        </div>
+                        <div class="wholesale-controls">
+                            <label>Cantidad:</label>
+                            <div class="qty-control">
+                                <input type="number" min="0" max="10" value="0" class="qty-standard" data-price="1850">
+                            </div>
+
+                            <div class="bulk-option">
+                                <label class="bulk-check-label">
+                                    <input type="checkbox" class="bulk-check"> Requiero más de 10
+                                </label>
+                            </div>
+                            <div class="bulk-extra-panel">
+                                <label>Cantidad Adicional:</label>
+                                <input type="number" min="0" class="qty-bulk form-input" style="width: 100%;">
+                                <small class="warning-text">Sujeto a disponibilidad.</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card wholesale-card">
+                        <div class="product-image-container">
+                            <img src="assets/mas-vendidos/paco-rabanne-1-million-royal-perfume-hombre.webp"
+                                alt="1 Million Royal">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Paco Rabanne</span>
+                            <h3 class="product-name">1 Million Royal 100ml</h3>
+                            <div class="product-price"><span>$1,400.00 MXN</span></div>
+                        </div>
+                        <div class="wholesale-controls">
+                            <label>Cantidad:</label>
+                            <div class="qty-control">
+                                <input type="number" min="0" max="3" value="0" class="qty-standard" data-price="1400">
+                            </div>
+
+                            <div class="bulk-option disabled">
+                                <label class="bulk-check-label">
+                                    <input type="checkbox" class="bulk-check" disabled> Requiero más de 10
+                                </label>
+                            </div>
+                            <div class="bulk-extra-panel">
+                                <input type="number" class="qty-bulk">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card wholesale-card">
+                        <div class="product-image-container">
+                            <img src="assets/mas-vendidos/lancome-la-vie-est-belle-perfume-mujer.jpg"
+                                alt="La Vie Est Belle">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Lancôme</span>
+                            <h3 class="product-name">La Vie Est Belle 100ml</h3>
+                            <div class="product-price"><span>$2,100.00 MXN</span></div>
+                        </div>
+                        <div class="wholesale-controls">
+                            <label>Cantidad:</label>
+                            <div class="qty-control">
+                                <input type="number" min="0" max="10" value="0" class="qty-standard" data-price="2100">
+                            </div>
+                            <div class="bulk-option">
+                                <label class="bulk-check-label">
+                                    <input type="checkbox" class="bulk-check"> Requiero más de 10
+                                </label>
+                            </div>
+                            <div class="bulk-extra-panel">
+                                <label>Cantidad Adicional:</label>
+                                <input type="number" min="0" class="qty-bulk form-input" style="width: 100%;">
+                                <small class="warning-text">Sujeto a disponibilidad.</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card wholesale-card">
+                        <div class="product-image-container">
+                            <img src="assets/mas-vendidos/nautica-voyage-perfume-caballero.webp" alt="Nautica Voyage">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Nautica</span>
+                            <h3 class="product-name">Voyage 100ml</h3>
+                            <div class="product-price"><span>$450.00 MXN</span></div>
+                        </div>
+                        <div class="wholesale-controls">
+                            <label>Cantidad:</label>
+                            <div class="qty-control">
+                                <input type="number" min="0" max="10" value="0" class="qty-standard" data-price="450">
+                            </div>
+                            <div class="bulk-option">
+                                <label class="bulk-check-label">
+                                    <input type="checkbox" class="bulk-check"> Requiero más de 10
+                                </label>
+                            </div>
+                            <div class="bulk-extra-panel">
+                                <label>Cantidad Adicional:</label>
+                                <input type="number" min="0" class="qty-bulk form-input" style="width: 100%;">
+                                <small class="warning-text">Sujeto a disponibilidad.</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card wholesale-card">
+                        <div class="product-image-container">
+                            <img src="assets/nuevos-lanzamientos/christian-dior-sauvage-perfume-caballero.jpg"
+                                alt="Dior Sauvage">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Dior</span>
+                            <h3 class="product-name">Sauvage EDT 100ml</h3>
+                            <div class="product-price"><span>$2,450.00 MXN</span></div>
+                        </div>
+                        <div class="wholesale-controls">
+                            <label>Cantidad:</label>
+                            <div class="qty-control">
+                                <input type="number" min="0" max="2" value="0" class="qty-standard" data-price="2450">
+                            </div>
+                            <div class="bulk-option disabled">
+                                <label class="bulk-check-label">
+                                    <input type="checkbox" class="bulk-check" disabled> Requiero más de 10
+                                </label>
+                            </div>
+                            <div class="bulk-extra-panel"><input type="number" class="qty-bulk"></div>
+                        </div>
+                    </div>
+
+                    <div class="product-card wholesale-card">
+                        <div class="product-image-container">
+                            <img src="assets/nuevos-lanzamientos/armaf-club-de-nuit-intense-man-limited-edition-perfume-hombre.webp"
+                                alt="Club de Nuit">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Armaf</span>
+                            <h3 class="product-name">Club de Nuit Intense</h3>
+                            <div class="product-price"><span>$950.00 MXN</span></div>
+                        </div>
+                        <div class="wholesale-controls">
+                            <label>Cantidad:</label>
+                            <div class="qty-control">
+                                <input type="number" min="0" max="5" value="0" class="qty-standard" data-price="950">
+                            </div>
+                            <div class="bulk-option disabled">
+                                <label class="bulk-check-label">
+                                    <input type="checkbox" class="bulk-check" disabled> Requiero más de 10
+                                </label>
+                            </div>
+                            <div class="bulk-extra-panel"><input type="number" class="qty-bulk"></div>
+                        </div>
+                    </div>
+
+                    <div class="product-card wholesale-card">
+                        <div class="product-image-container">
+                            <img src="assets/nuevos-lanzamientos/versace-bright-crystal-perfume-mujer.webp"
+                                alt="Bright Crystal">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Versace</span>
+                            <h3 class="product-name">Bright Crystal 90ml</h3>
+                            <div class="product-price"><span>$1,350.00 MXN</span></div>
+                        </div>
+                        <div class="wholesale-controls">
+                            <label>Cantidad:</label>
+                            <div class="qty-control">
+                                <input type="number" min="0" max="10" value="0" class="qty-standard" data-price="1350">
+                            </div>
+                            <div class="bulk-option">
+                                <label class="bulk-check-label">
+                                    <input type="checkbox" class="bulk-check"> Requiero más de 10
+                                </label>
+                            </div>
+                            <div class="bulk-extra-panel">
+                                <label>Cantidad Adicional:</label>
+                                <input type="number" min="0" class="qty-bulk form-input" style="width: 100%;">
+                                <small class="warning-text">Sujeto a disponibilidad.</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card wholesale-card">
+                        <div class="product-image-container">
+                            <img src="assets/nuevos-lanzamientos/shakira-dance-red-midnight-perfume-mujer.jpg"
+                                alt="Shakira Dance">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Shakira</span>
+                            <h3 class="product-name">Dance Red Midnight</h3>
+                            <div class="product-price"><span>$550.00 MXN</span></div>
+                        </div>
+                        <div class="wholesale-controls">
+                            <label>Cantidad:</label>
+                            <div class="qty-control">
+                                <input type="number" min="0" max="4" value="0" class="qty-standard" data-price="550">
+                            </div>
+                            <div class="bulk-option disabled">
+                                <label class="bulk-check-label">
+                                    <input type="checkbox" class="bulk-check" disabled> Requiero más de 10
+                                </label>
+                            </div>
+                            <div class="bulk-extra-panel"><input type="number" class="qty-bulk"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <div class="wholesale-bar" id="wholesale-bar">
+            <div class="wb-info">
+                <div class="wb-count">
+                    <span class="material-symbols-outlined">inventory_2</span>
+                    <span id="total-units">0</span> unidades seleccionadas
+                </div>
+                <div class="wb-total">
+                    Total estimado: <span id="total-price">$0.00</span>
+                </div>
+            </div>
+            <button class="btn-primary wb-btn" onclick="window.location.href='resumen-compra.html'">
+                Ver Orden Completa
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+        </div>
+
+    </main>
+
+    <script src="js/mayoreo.js"></script>
+</body>
+
+</html>

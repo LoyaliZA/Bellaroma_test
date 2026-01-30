@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Pedido #8823 - Bellaroma</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/mayoreo.css">
+</head>
+<body data-theme="light">
+
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="navbar-logo"><img src="assets/Bellaroma_logos/br_logo_negro_transparente.png" style="height:60px;"></div>
+            <ul class="main-nav">
+                <li><a href="rastreo-pedido.html" style="display:flex; align-items:center; gap:5px;">
+                    <span class="material-symbols-outlined">arrow_back</span> Volver a Mis Pedidos
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="order-detail-container">
+        
+        <div class="detail-header">
+            <div>
+                <h1>Detalles del Pedido <span style="color:var(--color-primary-accent);">#8823</span></h1>
+                <p class="date-label">Realizado el 30 de Enero, 2026</p>
+            </div>
+            <div class="header-actions">
+                <button class="btn-outline">
+                    <span class="material-symbols-outlined">receipt_long</span> Descargar Factura
+                </button>
+                <button class="btn-primary">
+                    <span class="material-symbols-outlined">autorenew</span> Volver a Pedir
+                </button>
+            </div>
+        </div>
+
+        <section class="info-grid">
+            <div class="info-card">
+                <h3>Dirección de Envío</h3>
+                <p><strong>Juan Pérez (Abarrotes del Centro)</strong></p>
+                <p>Av. Paseo Tabasco 1405</p>
+                <p>Col. Tabasco 2000</p>
+                <p>Villahermosa, Tabasco, 86035</p>
+                <p>México</p>
+            </div>
+            <div class="info-card">
+                <h3>Método de Pago</h3>
+                <p><span class="material-symbols-outlined" style="vertical-align:middle; font-size:18px;">credit_card</span> Visa terminada en 4242</p>
+                <p style="margin-top:10px; font-size:0.9rem; color:var(--color-text-muted);">
+                    Pago verificado para 10 unidades.<br>
+                    Crédito aprobado para excedente.
+                </p>
+            </div>
+            <div class="info-card summary-highlight">
+                <h3>Resumen del Pedido</h3>
+                <div class="summary-row">
+                    <span>Subtotal Productos:</span>
+                    <span>$12,450.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Envío:</span>
+                    <span>$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Impuestos (IVA):</span>
+                    <span>$1,992.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total General:</span>
+                    <span>$14,442.00</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="status-section">
+            <h3>Estado del Envío</h3>
+            <div class="large-tracker">
+                <div class="tracker-step completed">
+                    <div class="dot"><span class="material-symbols-outlined">check</span></div>
+                    <div class="label">Orden Recibida<br><small>30 Ene</small></div>
+                </div>
+                <div class="tracker-step completed">
+                    <div class="dot"><span class="material-symbols-outlined">inventory</span></div>
+                    <div class="label">Validación Stock<br><small>30 Ene</small></div>
+                </div>
+                <div class="tracker-step active">
+                    <div class="dot"><span class="material-symbols-outlined">local_shipping</span></div>
+                    <div class="label">En Camino<br><small>01 Feb</small></div>
+                    <div class="tracker-line-highlight"></div>
+                </div>
+                <div class="tracker-step">
+                    <div class="dot"><span class="material-symbols-outlined">home</span></div>
+                    <div class="label">Entregado<br><small>Est. 05 Feb</small></div>
+                </div>
+            </div>
+            <div class="tracking-code-box">
+                Paquetería: <strong>Estafeta</strong> | Guía: <a href="#">MX-8899776655</a>
+            </div>
+        </section>
+
+        <section class="product-table-section">
+            <h3>Contenido del Paquete</h3>
+            <div class="table-responsive">
+                <table class="detail-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 50%;">Producto</th>
+                            <th style="width: 15%;">Precio Unit.</th>
+                            <th style="width: 15%;">Cantidad</th>
+                            <th style="width: 20%; text-align: right;">Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="item-cell">
+                                    <img src="assets/mas-vendidos/carolina-herrera-very-good-girl-glam-perfume-mujer.jpg" alt="Perfume">
+                                    <div>
+                                        <strong>Good Girl Glam 80ml</strong>
+                                        <p>SKU: CH-GGG-80</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>$1,850.00</td>
+                            <td>5</td>
+                            <td class="text-right">$9,250.00</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="item-cell">
+                                    <img src="assets/nuevos-lanzamientos/versace-bright-crystal-perfume-mujer.webp" alt="Perfume">
+                                    <div>
+                                        <strong>Versace Bright Crystal</strong>
+                                        <p>SKU: VER-BC-90</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>$1,350.00</td>
+                            <td>2</td>
+                            <td class="text-right">$2,700.00</td>
+                        </tr>
+                        <tr style="background-color: #fff8e1;">
+                            <td>
+                                <div class="item-cell">
+                                    <img src="assets/mas-vendidos/paco-rabanne-1-million-royal-perfume-hombre.webp" alt="Perfume">
+                                    <div>
+                                        <strong>1 Million Royal (Solicitud Extra)</strong>
+                                        <p style="color:#f57f17; font-weight:600;">Validado manual por almacén</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>$1,400.00</td>
+                            <td>2</td>
+                            <td class="text-right">$2,800.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

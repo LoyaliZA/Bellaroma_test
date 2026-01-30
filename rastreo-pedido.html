@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Pedidos - Bellaroma Mayoreo</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/mayoreo.css">
+</head>
+<body data-theme="light">
+
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="navbar-logo"><img src="assets/Bellaroma_logos/br_logo_negro_transparente.png" style="height:60px;"></div>
+            <ul class="main-nav">
+                <li><a href="catalogo-mayoreo.html">CATÁLOGO</a></li>
+                <li><a href="#" class="active">MIS PEDIDOS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="tracking-container">
+        <h1 style="margin-bottom: 2rem;">Historial de Pedidos</h1>
+
+        <div class="order-card status-processing">
+            <div class="order-header">
+                <div class="order-id">
+                    <span class="material-symbols-outlined icon">package_2</span>
+                    <div>
+                        <h3>Pedido #8823</h3>
+                        <small>Fecha: 30 Ene, 2026</small>
+                    </div>
+                </div>
+                <div class="order-status-badge">
+                    En Proceso
+                </div>
+                <div class="order-total">
+                    <span>Total: $12,450.00</span>
+                    <button class="btn-toggle-details" onclick="window.location.href='detalle-pedido.html'">
+    Ver detalles completo <span class="material-symbols-outlined">visibility</span>
+</button>
+                </div>
+            </div>
+
+            <div class="order-details-panel">
+                <div class="tracking-timeline-mini">
+                    <div class="step completed">Pagado</div>
+                    <div class="step active">Validando Stock</div>
+                    <div class="step">Enviado</div>
+                </div>
+                
+                <h4>Productos:</h4>
+                <ul class="order-product-list">
+                    <li>
+                        <span class="qty">5x</span> 
+                        <span>Carolina Herrera Good Girl</span>
+                        <span class="price">$9,750.00</span>
+                    </li>
+                    <li>
+                        <span class="qty">2x</span> 
+                        <span>Versace Bright Crystal</span>
+                        <span class="price">$2,700.00</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="order-card status-shipped">
+            <div class="order-header">
+                <div class="order-id">
+                    <span class="material-symbols-outlined icon">local_shipping</span>
+                    <div>
+                        <h3>Pedido #8820</h3>
+                        <small>Fecha: 25 Ene, 2026</small>
+                    </div>
+                </div>
+                <div class="order-status-badge">
+                    Enviado
+                </div>
+                <div class="order-total">
+                    <span>Total: $45,200.00</span>
+                        <button class="btn-toggle-details" onclick="window.location.href='detalle-pedido.html'">
+                            Ver detalles completo <span class="material-symbols-outlined">visibility</span>
+                        </button>
+                </div>
+            </div>
+
+            <div class="order-details-panel">
+                <div class="tracking-info-box">
+                    <strong>Guía Estafeta:</strong> <a href="#">MX-9988776655</a>
+                    <p>Entrega estimada: 02 Feb, 2026</p>
+                </div>
+                <h4>Productos (Resumen):</h4>
+                <ul class="order-product-list">
+                    <li><span class="qty">10x</span> Paco Rabanne 1 Million</li>
+                    <li><span class="qty">15x</span> Nautica Voyage</li>
+                    <li><span class="qty">5x</span> Armaf Club de Nuit</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="order-card status-completed">
+            <div class="order-header">
+                <div class="order-id">
+                    <span class="material-symbols-outlined icon">check_circle</span>
+                    <div>
+                        <h3>Pedido #8801</h3>
+                        <small>Fecha: 10 Ene, 2026</small>
+                    </div>
+                </div>
+                <div class="order-status-badge">
+                    Entregado
+                </div>
+                <div class="order-total">
+                    <span>Total: $8,500.00</span>
+                    <button class="btn-toggle-details" onclick="window.location.href='detalle-pedido.html'">
+    Ver detalles completo <span class="material-symbols-outlined">visibility</span>
+</button>
+                </div>
+            </div>
+
+            <div class="order-details-panel">
+                <div class="success-message">
+                    <span class="material-symbols-outlined">thumb_up</span>
+                    Entregado el 14 de Enero. ¡Gracias por tu compra!
+                </div>
+                <ul class="order-product-list">
+                    <li><span class="qty">8x</span> Versace Eros</li>
+                </ul>
+                <button class="btn-outline">Descargar Factura</button>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        function toggleDetails(btn) {
+            const card = btn.closest('.order-card');
+            card.classList.toggle('expanded');
+            const icon = btn.querySelector('.material-symbols-outlined');
+            icon.textContent = card.classList.contains('expanded') ? 'expand_less' : 'expand_more';
+        }
+    </script>
+</body>
+</html>
