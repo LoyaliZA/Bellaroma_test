@@ -85,4 +85,67 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+
+    /* js/mayoreo.js - Agrega esto dentro del DOMContentLoaded */
+
+    // --- LÓGICA DEL STEPPER (SUMADOR) ---
+    const stepperButtons = document.querySelectorAll('.btn-stepper');
+
+    stepperButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            // Evitar que el botón envíe formularios si está dentro de uno
+            e.preventDefault();
+
+            // Identificar elementos cercanos
+            const container = btn.closest('.stepper-control');
+            const input = container.querySelector('input');
+            const btnMinus = container.querySelector('.btn-stepper.minus');
+            const btnPlus = container.querySelector('.btn-stepper.plus');
+            
+            // Leer valores actuales
+            let currentVal = parseInt(input.value) || 0;
+            const maxVal = parseInt(input.getAttribute('max')) || 10;
+            const minVal = parseInt(input.getAttribute('min')) || 0;
+
+            // Determinar acción
+            if (btn.classList.contains('plus')) {
+                if (currentVal < maxVal) {
+                    currentVal++;
+                } else {
+                    // Feedback visual si intentan pasar el límite
+                    alert(`El límite para compra directa es de ${maxVal} unidades.`);
+                }
+            } else if (btn.classList.contains('minus')) {
+                if (currentVal > minVal) {
+                    currentVal--;
+                }
+            }
+
+            // Actualizar input
+            input.value = currentVal;
+
+            // Actualizar estado de botones (deshabilitar si llega al límite)
+            btnMinus.disabled = (currentVal <= minVal);
+            btnPlus.disabled = (currentVal >= maxVal);
+
+            // IMPORTANTE: Disparar evento 'input' manualmente para que 
+            // la función calculateTotals() (tu barra flotante) se entere del cambio.
+            input.dispatchEvent(new Event('input'));
+        });
+    });
+
+    // Validar estado inicial de los botones al cargar
+    document.querySelectorAll('.qty-standard').forEach(input => {
+        const container = input.closest('.stepper-control');
+        if(container) {
+            const btnMinus = container.querySelector('.btn-stepper.minus');
+            const btnPlus = container.querySelector('.btn-stepper.plus');
+            const val = parseInt(input.value) || 0;
+            const max = parseInt(input.getAttribute('max')) || 10;
+            
+            btnMinus.disabled = (val <= 0);
+            btnPlus.disabled = (val >= max);
+        }
+    });
 });

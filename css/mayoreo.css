@@ -783,6 +783,134 @@
     }
 }
 
+/* css/mayoreo.css - Agrega esto al final o en la sección de Tarjetas */
+
+/* Contenedor del Stepper */
+.qty-control.stepper-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    overflow: hidden; /* Para que los botones no se salgan de las esquinas */
+    width: fit-content;
+}
+
+/* Botones + y - */
+.btn-stepper {
+    background-color: var(--color-secondary-accent);
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: var(--color-text);
+}
+
+.btn-stepper:hover {
+    background-color: #e0e0e0; /* Un gris un poco más oscuro al pasar el mouse */
+}
+
+.btn-stepper:active {
+    background-color: #d0d0d0;
+}
+
+.btn-stepper:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.btn-stepper .material-symbols-outlined {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Ajuste del Input Central */
+.qty-control.stepper-control input {
+    border: none; /* Quitamos borde porque el contenedor ya lo tiene */
+    border-left: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-border);
+    border-radius: 0;
+    height: 40px;
+    width: 50px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0;
+    /* Eliminar flechas nativas del navegador */
+    -moz-appearance: textfield; 
+}
+
+/* Eliminar flechas nativas en Webkit (Chrome/Safari) */
+.qty-control.stepper-control input::-webkit-outer-spin-button,
+.qty-control.stepper-control input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* --- Correcciones Navbar Móvil y Botón Regresar --- */
+
+/* Por defecto (Escritorio): Ocultar flecha y botón menú */
+.mobile-back-btn, 
+.mobile-menu-toggle {
+    display: none;
+}
+
+/* Ocultar elementos específicos de escritorio */
+@media (max-width: 992px) {
+    .hide-mobile {
+        display: none !important;
+    }
+
+    /* Mostrar y estilizar la flecha de regreso */
+    .mobile-back-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-text);
+        text-decoration: none;
+        margin-right: 10px;
+        padding: 5px;
+        order: 1; /* Posición 1: Izquierda extrema */
+    }
+
+    /* Mostrar botón hamburguesa */
+    .mobile-menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: var(--color-text);
+        cursor: pointer;
+        padding: 0;
+        margin-left: 10px;
+    }
+
+    /* Reordenar la barra de navegación para móvil */
+    .navbar {
+        padding: 0 10px; /* Reducir padding para ganar espacio */
+        gap: 5px;
+    }
+
+    /* Logo al centro (o ajustado según espacio) */
+    .navbar-logo {
+        order: 2;
+        flex-grow: 1; /* Ocupa el espacio central */
+        display: flex;
+        justify-content: center; /* Centrar logo */
+    }
+    .navbar-logo img {
+        height: 40px !important; /* Logo un poco más pequeño en móvil */
+    }
+
+    /* Acciones (Carrito + Menú) a la derecha */
+    .nav-actions {
+        order: 3;
+        gap: 5px !important;
+    }
+}
+
 @media (max-width: 600px) {
 
     /* Ajustes Cards de Pedidos */

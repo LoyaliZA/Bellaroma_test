@@ -14,14 +14,53 @@
 
     <header class="main-header">
         <nav class="navbar">
-            <div class="navbar-logo"><img src="assets/Bellaroma_logos/br_logo_negro_transparente.png" style="height:60px;"></div>
+            <a href="javascript:history.back()" class="mobile-back-btn">
+                <span class="material-symbols-outlined">arrow_back</span>
+            </a>
+
+            <div class="navbar-logo">
+                <img src="assets/Bellaroma_logos/br_logo_negro_transparente.png" alt="Bellaroma" style="height: 50px;">
+            </div>
+
+            <ul class="main-nav">
+                <li><a href="catalogo-mayoreo.html">CATÁLOGO</a></li>
+                <li><a href="rastreo-pedido.html">MIS PEDIDOS</a></li>
+            </ul>
+
             <div class="nav-actions">
-                <a href="catalogo-mayoreo.html" style="display:flex; align-items:center; gap:5px;">
-                    <span class="material-symbols-outlined">arrow_back</span> Modificar Pedido
-                </a>
+                <span style="font-size: 0.9rem;" class="hide-mobile">Cliente: <strong>#8821</strong></span>
+
+                <div class="cart-action" onclick="window.location.href='resumen-compra.html'" style="cursor: pointer;">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </div>
+
+                <button class="mobile-menu-toggle">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
             </div>
         </nav>
     </header>
+
+    <div class="nav-overlay"></div>
+    <div class="mobile-nav-panel">
+        <button class="close-btn">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+
+        <div style="text-align: center; margin-bottom: 2rem;">
+            <img src="assets/Bellaroma_logos/br_logo_negro_transparente.png" style="height: 60px;">
+        </div>
+
+        <ul>
+            <li><a href="catalogo-mayoreo.html">Catálogo Mayoreo</a></li>
+            <li><a href="resumen-compra.html">Mi Carrito Actual</a></li>
+            <li><a href="rastreo-pedido.html">Mis Pedidos</a></li>
+            <hr style="border: 0; border-top: 1px solid var(--color-border);">
+            <li><a href="#" style="font-size: 1rem;">Mi Cuenta (#8821)</a></li>
+            <li><a href="#" style="font-size: 1rem; color: #c62828;">Cerrar Sesión</a></li>
+        </ul>
+    </div>
 
     <div class="checkout-grid">
         <div class="details-column">
@@ -161,6 +200,18 @@
             </div>
         </div>
     </div>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/mayoreo.js"></script>
+
+    <script>
+        // Inicializar el menú móvil
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof initNavbar === 'function') {
+                initNavbar();
+            }
+        });
+    </script>
 
 </body>
 </html>
